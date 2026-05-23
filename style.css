@@ -168,7 +168,8 @@ body {
     align-items: center;
     text-align: center;
     position: relative;
-    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 50%, var(--primary-light) 100%);
+    /* 这里就是关键：设置背景图 */
+    background: url('jinan-lake-banner.jpg') center/cover no-repeat;
     color: white;
     padding: 100px 20px 60px;
 }
