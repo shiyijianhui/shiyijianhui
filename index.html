@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>济南水系文化数字人文平台 | Jinan Water Culture Digital Humanities Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">💧</span>
+                <span class="logo-text" data-zh="济南水系文化" data-en="Jinan Water Culture">济南水系文化</span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active" data-zh="首页" data-en="Home">首页</a>
+                <a href="#about" class="nav-link" data-zh="平台介绍" data-en="About">平台介绍</a>
+                <a href="#resources" class="nav-link" data-zh="文化资源" data-en="Resources">文化资源</a>
+                <a href="#ai" class="nav-link" data-zh="AI智能体" data-en="AI Agent">AI智能体</a>
+                <a href="#tour" class="nav-link" data-zh="虚拟漫游" data-en="Virtual Tour">虚拟漫游</a>
+                <a href="#map" class="nav-link" data-zh="时空地图" data-en="Time-Space Map">时空地图</a>
+                <a href="#contact" class="nav-link" data-zh="关于我们" data-en="Contact">关于我们</a>
+            </div>
+            <div class="nav-actions">
+                <button class="lang-toggle" id="langToggle">EN</button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首页 Hero区域 -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title" data-zh="济南水系文化数字人文平台" data-en="Jinan Water Culture Digital Humanities Platform">
+                济南水系文化数字人文平台
+            </h1>
+            <p class="hero-subtitle" data-zh="以泉为脉，承载千年文化；以数为媒，焕发古城新韵" data-en="Water as the vein, carrying millennia of culture; Digital as the medium, revitalizing the ancient city">
+                以泉为脉，承载千年文化；以数为媒，焕发古城新韵
+            </p>
+            <div class="hero-buttons">
+                <a href="#resources" class="btn btn-primary" data-zh="探索文化资源" data-en="Explore Resources">探索文化资源</a>
+                <a href="#tour" class="btn btn-secondary" data-zh="虚拟漫游体验" data-en="Virtual Tour">虚拟漫游体验</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span data-zh="向下滚动" data-en="Scroll Down">向下滚动</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- 核心亮点 -->
+    <section class="highlights">
+        <div class="container">
+            <h2 class="section-title" data-zh="核心亮点" data-en="Core Highlights">核心亮点</h2>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-icon">🏛️</div>
+                    <h3 data-zh="文化整合" data-en="Cultural Integration">文化整合</h3>
+                    <p data-zh="整合泉水、名士、红色、古城、商埠五大文化体系，构建完整的济南文化知识图谱" data-en="Integrating five cultural systems: springs, scholars, revolutionary, ancient city, and commercial port">整合泉水、名士、红色、古城、商埠五大文化体系，构建完整的济南文化知识图谱</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">🤖</div>
+                    <h3 data-zh="AI赋能" data-en="AI Empowerment">AI赋能</h3>
+                    <p data-zh="智能问答、语音讲解、个性化路线规划，让文化探索更智能、更便捷" data-en="Intelligent Q&A, voice narration, personalized route planning for smarter exploration">智能问答、语音讲解、个性化路线规划，让文化探索更智能、更便捷</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">🖼️</div>
+                    <h3 data-zh="虚拟漫游" data-en="Virtual Tour">虚拟漫游</h3>
+                    <p data-zh="老照片翻页相册、360°全景图、历史场景复原，沉浸式体验济南水系文化" data-en="Photo albums, 360° panoramas, historical scene restoration for immersive experience">老照片翻页相册、360°全景图、历史场景复原，沉浸式体验济南水系文化</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">📚</div>
+                    <h3 data-zh="学术支撑" data-en="Academic Foundation">学术支撑</h3>
+                    <p data-zh="依托高校研究资源，确保数据准确性与学术严谨性，服务教学科研" data-en="University-backed research resources ensuring accuracy and academic rigor">依托高校研究资源，确保数据准确性与学术严谨性，服务教学科研</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 四大文化板块入口 -->
+    <section class="culture-entries">
+        <div class="container">
+            <h2 class="section-title" data-zh="文化板块" data-en="Cultural Sections">文化板块</h2>
+            <div class="culture-grid">
+                <div class="culture-card" data-type="spring">
+                    <div class="culture-card-bg"></div>
+                    <div class="culture-card-content">
+                        <span class="culture-icon">💧</span>
+                        <h3 data-zh="泉水文化" data-en="Spring Culture">泉水文化</h3>
+                        <p data-zh="趵突泉、黑虎泉、珍珠泉..." data-en="Baotu Spring, Black Tiger Spring, Pearl Spring...">趵突泉、黑虎泉、珍珠泉...</p>
+                    </div>
+                </div>
+                <div class="culture-card" data-type="scholar">
+                    <div class="culture-card-bg"></div>
+                    <div class="culture-card-content">
+                        <span class="culture-icon">📜</span>
+                        <h3 data-zh="名士文化" data-en="Scholar Culture">名士文化</h3>
+                        <p data-zh="李清照、辛弃疾、老舍..." data-en="Li Qingzhao, Xin Qiji, Lao She...">李清照、辛弃疾、老舍...</p>
+                    </div>
+                </div>
+                <div class="culture-card" data-type="revolution">
+                    <div class="culture-card-bg"></div>
+                    <div class="culture-card-content">
+                        <span class="culture-icon">⭐</span>
+                        <h3 data-zh="红色文化" data-en="Revolutionary Culture">红色文化</h3>
+                        <p data-zh="解放阁、英雄山、革命遗址..." data-en="Liberation Pavilion, Hero Mountain...">解放阁、英雄山、革命遗址...</p>
+                    </div>
+                </div>
+                <div class="culture-card" data-type="ancient">
+                    <div class="culture-card-bg"></div>
+                    <div class="culture-card-content">
+                        <span class="culture-icon">🏯</span>
+                        <h3 data-zh="古城商埠" data-en="Ancient City & Port">古城商埠</h3>
+                        <p data-zh="明府城、经纬路、老字号..." data-en="Ming City, Grid Streets, Time-honored Brands...">明府城、经纬路、老字号...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 平台介绍 -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-zh="平台介绍" data-en="About the Platform">平台介绍</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 data-zh="项目背景" data-en="Project Background">项目背景</h3>
+                    <p data-zh="济南素有"泉城"之称，拥有独特的泉水水系和深厚的文化底蕴。本平台以济南泉水水系为脉络，整合泉水文化、名士文化、红色文化、古城文化、商埠文化，运用数字人文方法，打造集文化展示、智能查询、AI问答、路线规划、历史场景复原于一体的学术型数字平台。" data-en="Jinan is known as the 'City of Springs' with unique water systems and profound cultural heritage. This platform takes Jinan's spring water system as the thread, integrating spring culture, scholar culture, revolutionary culture, ancient city culture, and commercial port culture.">
+                        济南素有"泉城"之称，拥有独特的泉水水系和深厚的文化底蕴。本平台以济南泉水水系为脉络，整合泉水文化、名士文化、红色文化、古城文化、商埠文化，运用数字人文方法，打造集文化展示、智能查询、AI问答、路线规划、历史场景复原于一体的学术型数字平台。
+                    </p>
+                    <h3 data-zh="研究价值" data-en="Research Value">研究价值</h3>
+                    <ul class="about-list">
+                        <li data-zh="构建济南水系文化知识图谱，实现文化资源数字化保护" data-en="Building Jinan water culture knowledge graph for digital preservation">构建济南水系文化知识图谱，实现文化资源数字化保护</li>
+                        <li data-zh="探索数字人文方法在地方文化研究中的应用" data-en="Exploring digital humanities methods in local culture research">探索数字人文方法在地方文化研究中的应用</li>
+                        <li data-zh="为济南文化传承与城市形象推广提供技术支撑" data-en="Providing technical support for cultural heritage and city promotion">为济南文化传承与城市形象推广提供技术支撑</li>
+                        <li data-zh="服务高校教学科研，推动文化研究与科技融合" data-en="Serving university teaching and research, promoting culture-tech integration">服务高校教学科研，推动文化研究与科技融合</li>
+                    </ul>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">72</span>
+                        <span class="stat-label" data-zh="名泉数据" data-en="Famous Springs">名泉数据</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label" data-zh="文化点位" data-en="Cultural Sites">文化点位</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label" data-zh="历史名人" data-en="Historical Figures">历史名人</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label" data-zh="文献资料" data-en="Documents">文献资料</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 文化资源 -->
+    <section id="resources" class="resources">
+        <div class="container">
+            <h2 class="section-title" data-zh="文化资源" data-en="Cultural Resources">文化资源</h2>
+
+            <!-- 资源分类标签 -->
+            <div class="resource-tabs">
+                <button class="tab-btn active" data-tab="spring" data-zh="泉水文化" data-en="Spring Culture">泉水文化</button>
+                <button class="tab-btn" data-tab="scholar" data-zh="名士文化" data-en="Scholar Culture">名士文化</button>
+                <button class="tab-btn" data-tab="revolution" data-zh="红色文化" data-en="Revolutionary Culture">红色文化</button>
+                <button class="tab-btn" data-tab="ancient" data-zh="古城文化" data-en="Ancient City">古城文化</button>
+                <button class="tab-btn" data-tab="water" data-zh="水系脉络" data-en="Water System">水系脉络</button>
+            </div>
+
+            <!-- 泉水文化 -->
+            <div class="resource-content active" id="tab-spring">
+                <div class="resource-intro">
+                    <h3 data-zh="济南泉水文化" data-en="Jinan Spring Culture">济南泉水文化</h3>
+                    <p data-zh="济南泉水众多，素有"七十二名泉"之说，泉水文化是济南最具代表性的城市名片。" data-en="Jinan has numerous springs, known as the '72 Famous Springs', representing the city's iconic identity.">济南泉水众多，素有"七十二名泉"之说，泉水文化是济南最具代表性的城市名片。</p>
+                </div>
+                <div class="resource-grid">
+                    <div class="resource-item">
+                        <div class="resource-image">💧</div>
+                        <h4>趵突泉</h4>
+                        <p data-zh="天下第一泉，三股泉水喷涌而出，蔚为壮观" data-en="The First Spring Under Heaven">天下第一泉，三股泉水喷涌而出，蔚为壮观</p>
+                        <span class="resource-tag" data-zh="国家级重点名胜" data-en="National Scenic Spot">国家级重点名胜</span>
+                    </div>
+                    <div class="resource-item">
+                        <div class="resource-image">💧</div>
+                        <h4>黑虎泉</h4>
+                        <p data-zh="泉水从三个石雕虎头喷出，声如虎啸" data-en="Water sprays from three stone tiger heads">泉水从三个石雕虎头喷出，声如虎啸</p>
+                        <span class="resource-tag" data-zh="济南七十二名泉" data-en="72 Famous Springs">济南七十二名泉</span>
+                    </div>
+                    <div class="resource-item">
+                        <div class="resource-image">💧</div>
+                        <h4>珍珠泉</h4>
+                        <p data-zh="泉水如珍珠般涌出，晶莹剔透" data-en="Water bubbles up like pearls">泉水如珍珠般涌出，晶莹剔透</p>
+                        <span class="resource-tag" data-zh="济南七十二名泉" data-en="72 Famous Springs">济南七十二名泉</span>
+                    </div>
+                    <div class="resource-item">
+                        <div class="resource-image">💧</div>
+                        <h4>五龙潭</h4>
+                        <p data-zh="传说与龙王有关，潭水清澈见底" data-en="Legend says it's connected to Dragon King">传说与龙王有关，潭水清澈见底</p>
+                        <span class="resource-tag" data-zh="济南七十二名泉" data-en="72 Famous Springs">济南七十二名泉</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 名士文化 -->
+            <div class="resource-content" id="tab-scholar">
+                <div class="resource-intro">
+                    <h3 data-zh="济南名士文化" data-en="Jinan Scholar Culture">济南名士文化</h3>
+                    <p data-zh="济南自古人文荟萃，李清照、辛弃疾等文化名人为这座城市增添了浓厚的文化底蕴。" data-en="Jinan has been home to many scholars, adding rich cultural heritage to the city.">济南自古人文荟萃，李清照、辛弃疾等文化名人为这座城市增添了浓厚的文化底蕴。</p>
+                </div>
+                <div class="resource-grid">
+                    <div class="resource-item">
+                        <div class="resource-image">📜</div>
+                        <h4>李清照</h4>
+                        <p data-zh="宋代女词人，婉约派代表，济南章丘人" data-en="Song Dynasty poetess, representative of graceful school">宋代女词人，婉约派代表，济南章丘人</p>
+                        <span class="resource-tag" data-zh="千古第一才女" data-en="Greatest Female Poet">千古第一才女</span>
+                    </div>
+                    <div class="resource-item">
+                        <div class="resource-image">📜</div>
+                        <h4>辛弃疾</h4>
+                        <p data-zh="南宋豪放派词人，济南历城人，爱国词人" data-en="Southern Song poet, patriotic writer">南宋豪放派词人，济南历城人，爱国词人</p>
+                        <span class="resource-tag" data-zh="词中之龙" data-en="Dragon of Poetry">词中之龙</span>
+                    </div>
+                    <div class="resource-item">
+                        <div class="resource-image">📜</div>
+                        <h4>老舍</h4>
+                        <p data-zh="现代作家，在济南创作《济南的冬天》等名篇" data-en="Modern writer, wrote 'Winter in Jinan' here">现代作家，在济南创作《济南的冬天》等名篇</p>
+                        <span class="resource-tag" data-zh="人民艺术家" data-en="People's Artist">人民艺术家</span>
+                    </div>
+                    <div class="resource-item">
+                        <div class="resource-image">📜</div>
+                        <h4>张养浩</h4>
+                        <p data-zh="元代散曲作家，济南人，政论文名世" data-en="Yuan Dynasty poet and essayist">元代散曲作家，济南人，政论文名世</p>
+                        <span class="resource-tag" data-zh="元代名臣" data-en="Yuan Dynasty Official">元代名臣</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 红色文化 -->
+            <div class="resource-content" id="tab-revolution">
+                <div class="resource-intro">
+                    <h3 data-zh="济南红色文化" data-en="Jinan Revolutionary Culture">济南红色文化</h3>
+                    <p data-zh="济南是一座具有光荣革命传统的城市，留下了许多珍贵的红色遗址和革命故事。" data-en="Jinan has a glorious revolutionary tradition with many precious sites and stories.">济南是一座具有光荣革命传统的城市，留下了许多珍贵的红色遗址和革命故事。</p>
+                </div>
+                <div class="resource-grid">
+                    <div class="resource-item">
+                        <div class="resource-image">⭐</div>
+                        <h4>解放阁</h4>
+                        <p data-zh="纪念济南战役胜利而建，是济南解放的标志性建筑" data-en="Built to commemorate the victory of Jinan Battle">纪念济南战役胜利而建，是济南解放的标志性建筑</p>
+                        <span class="resource-tag" data-zh="山东省文物保护单位" data-en="Provincial Heritage Site">山东省文物保护单位</span>
+                    </div>
+                    <div class="resource-item">
+                        <div class="resource-image">⭐</div>
+                        <h4>英雄山革命烈士陵园</h4>
+                        <p data-zh="安葬革命先烈，传承红色基因的重要场所" data-en="Resting place of revolutionary martyrs">安葬革命先烈，传承红色基因的重要场所</p>
+                        <span class="resource-tag" data-zh="全国重点烈士纪念设施" data-en="National Memorial Site">全国重点烈士纪念设施</span>
+                    </div>
+                    <div class="resource-item">
+                        <div class="resource-image">⭐</div>
+                        <h4>济南战役纪念馆</h4>
+                        <p data-zh="全面展示济南战役历史，弘扬革命精神" data-en="Comprehensive exhibition of Jinan Battle history">全面展示济南战役历史，弘扬革命精神</p>
+                        <span class="resource-tag" data-zh="爱国主义教育基地" data-en="Patriotic Education Base">爱国主义教育基地</span>
+                    </div>
+                    <div class="resource-item">
+                        <div class="resource-image">⭐</div>
+                        <h4>中共山东省党史陈列馆</h4>
+                        <p data-zh="展示山东党组织发展历程和辉煌成就" data-en="Exhibiting Shandong Party organization history">展示山东党组织发展历程和辉煌成就</p>
+                        <span class="resource-tag" data-zh="红色教育基地" data-en="Red Education Base">红色教育基地</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 古城文化 -->
+            <div class="resource-content" id="tab-ancient">
+                <div class="resource-intro">
+                    <h3 data-zh="济南古城与商埠文化" data-en="Jinan Ancient City & Commercial Port">济南古城与商埠文化</h3>
+                    <p data-zh="济南古城历史悠久，商埠区见证了近代济南的开埠历史，形成了独特的城市风貌。" data-en="Jinan's ancient city has a long history, and the commercial port area witnessed modern development.">济南古城历史悠久，商埠区见证了近代济南的开埠历史，形成了独特的城市风貌。</p>
+                </div>
+                <div class="resource-grid">
+                    <div class="resource-item">
+                        <div class="resource-image">🏯</div>
+                        <h4>明府城</h4>
+                        <p data-zh="明代济南府城遗址，保留古城格局与历史风貌" data-en="Ming Dynasty city site with preserved layout">明代济南府城遗址，保留古城格局与历史风貌</p>
+                        <span class="resource-tag" data-zh="历史文化街区" data-en="Historical Block">历史文化街区</span>
+                    </div>
+                    <div class="resource-item">
+                        <div class="resource-image">🏯</div>
+                        <h4>芙蓉街</h4>
+                        <p data-zh="济南最古老街道之一，老字号云集" data-en="One of Jinan's oldest streets with time-honored brands">济南最古老街道之一，老字号云集</p>
+                        <span class="resource-tag" data-zh="美食文化街" data-en="Food Culture Street">美食文化街</span>
+                    </div>
+                    <div class="resource-item">
+                        <div class="resource-image">🏯</div>
+                        <h4>经纬路商埠区</h4>
+                        <p data-zh="近代济南开埠后形成的商业区，中西合璧建筑林立" data-en="Commercial area formed after Jinan's opening">近代济南开埠后形成的商业区，中西合璧建筑林立</p>
+                        <span class="resource-tag" data-zh="近现代建筑群" data-en="Modern Architecture">近现代建筑群</span>
+                    </div>
+                    <div class="resource-item">
+                        <div class="resource-image">🏯</div>
+                        <h4>宽厚里</h4>
+                        <p data-zh="济南老城区历史文化街区，传统与现代交融" data-en="Historical block blending tradition and modernity">济南老城区历史文化街区，传统与现代交融</p>
+                        <span class="resource-tag" data-zh="文旅融合示范" data-en="Cultural Tourism Model">文旅融合示范</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 水系脉络 -->
+            <div class="resource-content" id="tab-water">
+                <div class="resource-intro">
+                    <h3 data-zh="济南水系脉络" data-en="Jinan Water System">济南水系脉络</h3>
+                    <p data-zh="济南水系以泉水为源，形成护城河、大明湖、小清河等水网，构成了独特的城市水系格局。" data-en="Jinan's water system originates from springs, forming a unique urban water network.">济南水系以泉水为源，形成护城河、大明湖、小清河等水网，构成了独特的城市水系格局。</p>
+                </div>
+                <div class="resource-grid">
+                    <div class="resource-item">
+                        <div class="resource-image">🌊</div>
+                        <h4>大明湖</h4>
+                        <p data-zh="济南三大名胜之一，泉水汇聚而成" data-en="One of Jinan's three famous attractions">济南三大名胜之一，泉水汇聚而成</p>
+                        <span class="resource-tag" data-zh="国家5A级景区" data-en="5A Scenic Area">国家5A级景区</span>
+                    </div>
+                    <div class="resource-item">
+                        <div class="resource-image">🌊</div>
+                        <h4>护城河</h4>
+                        <p data-zh="环绕古城，泉水汇流，可乘船游览" data-en="Surrounding the ancient city, boat tours available">环绕古城，泉水汇流，可乘船游览</p>
+                        <span class="resource-tag" data-zh="泉水游览线" data-en="Spring Tour Route">泉水游览线</span>
+                    </div>
+                    <div class="resource-item">
+                        <div class="resource-image">🌊</div>
+                        <h4>小清河</h4>
+                        <p data-zh="济南重要的排洪河道和航运水道" data-en="Important drainage and shipping channel">济南重要的排洪河道和航运水道</p>
+                        <span class="resource-tag" data-zh="城市水脉" data-en="Urban Water Vein">城市水脉</span>
+                    </div>
+                    <div class="resource-item">
+                        <div class="resource-image">🌊</div>
+                        <h4>曲水亭街</h4>
+                        <p data-zh="小桥流水人家，展现济南水乡风情" data-en="Bridges, streams and homes showing Jinan's water town charm">小桥流水人家，展现济南水乡风情</p>
+                        <span class="resource-tag" data-zh="泉城风貌带" data-en="Spring City Style">泉城风貌带</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI智能体 -->
+    <section id="ai" class="ai-section">
+        <div class="container">
+            <h2 class="section-title" data-zh="AI智能体" data-en="AI Agent">AI智能体</h2>
+            <div class="ai-intro">
+                <p data-zh="基于大语言模型的智能问答系统，为您提供济南水系文化的深度解读与个性化服务" data-en="LLM-based intelligent Q&A system for in-depth interpretation and personalized services">基于大语言模型的智能问答系统，为您提供济南水系文化的深度解读与个性化服务</p>
+            </div>
+
+            <div class="ai-features">
+                <div class="ai-feature-card">
+                    <div class="ai-feature-icon">💬</div>
+                    <h3 data-zh="文化问答" data-en="Cultural Q&A">文化问答</h3>
+                    <p data-zh="智能解答济南泉水文化、历史名人、文化遗址等相关问题" data-en="Intelligent answers about Jinan's spring culture, historical figures, and cultural sites">智能解答济南泉水文化、历史名人、文化遗址等相关问题</p>
+                    <button class="btn btn-outline" onclick="openChat()" data-zh="开始问答" data-en="Start Chat">开始问答</button>
+                </div>
+                <div class="ai-feature-card">
+                    <div class="ai-feature-icon">🎙️</div>
+                    <h3 data-zh="语音讲解" data-en="Voice Narration">语音讲解</h3>
+                    <p data-zh="AI语音导览，为景点提供专业讲解，支持中英双语" data-en="AI voice guide with professional narration in Chinese and English">AI语音导览，为景点提供专业讲解，支持中英双语</p>
+                    <button class="btn btn-outline" onclick="openVoice()" data-zh="语音演示" data-en="Voice Demo">语音演示</button>
+                </div>
+                <div class="ai-feature-card">
+                    <div class="ai-feature-icon">📍</div>
+                    <h3 data-zh="路线规划" data-en="Route Planning">路线规划</h3>
+                    <p data-zh="根据兴趣偏好，智能规划个性化游览路线，优化行程安排" data-en="Personalized tour route planning based on your interests">根据兴趣偏好，智能规划个性化游览路线，优化行程安排</p>
+                    <button class="btn btn-outline" onclick="openRoute()" data-zh="规划路线" data-en="Plan Route">规划路线</button>
+                </div>
+            </div>
+
+            <!-- AI对话演示区 -->
+            <div class="ai-demo" id="aiDemo">
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <h4 data-zh="济南水系文化智能助手" data-en="Jinan Water Culture Assistant">济南水系文化智能助手</h4>
+                        <button class="close-btn" onclick="closeChat()">&times;</button>
+                    </div>
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message bot-message">
+                            <span data-zh="您好！我是济南水系文化智能助手，有什么可以帮您的？" data-en="Hello! I'm the Jinan Water Culture Assistant. How can I help you?">您好！我是济南水系文化智能助手，有什么可以帮您的？</span>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" id="userInput" data-placeholder-zh="请输入您的问题..." data-placeholder-en="Type your question..." placeholder="请输入您的问题...">
+                        <button onclick="sendMessage()" data-zh="发送" data-en="Send">发送</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 虚拟漫游 -->
+    <section id="tour" class="tour-section">
+        <div class="container">
+            <h2 class="section-title" data-zh="虚拟漫游" data-en="Virtual Tour">虚拟漫游</h2>
+            <div class="tour-intro">
+                <p data-zh="沉浸式体验济南古城水系的历史风貌，穿越时空感受泉城魅力" data-en="Immersive experience of Jinan's ancient water system history">沉浸式体验济南古城水系的历史风貌，穿越时空感受泉城魅力</p>
+            </div>
+
+            <!-- 模式切换 -->
+            <div class="tour-mode-switch">
+                <button class="mode-btn active" data-mode="album" onclick="switchTourMode('album')">
+                    <span class="mode-icon">📷</span>
+                    <span data-zh="老照片相册" data-en="Photo Album">老照片相册</span>
+                </button>
+                <button class="mode-btn" data-mode="panorama" onclick="switchTourMode('panorama')">
+                    <span class="mode-icon">🌐</span>
+                    <span data-zh="全景漫游" data-en="360° Panorama">全景漫游</span>
+                </button>
+            </div>
+
+            <!-- 老照片相册模式 -->
+            <div class="tour-content" id="albumMode">
+                <div class="album-container">
+                    <div class="album-header">
+                        <h3 data-zh="济南水系历史影像集" data-en="Jinan Water System Historical Photos">济南水系历史影像集</h3>
+                        <p data-zh="翻阅珍贵历史照片，见证济南水系的百年变迁" data-en="Browse precious historical photos witnessing Jinan's century-long transformation">翻阅珍贵历史照片，见证济南水系的百年变迁</p>
+                    </div>
+
+                    <div class="flipbook-wrapper">
+                        <div class="flipbook" id="flipbook">
+                            <div class="flipbook-pages">
+                                <!-- 第1页 -->
+                                <div class="flipbook-page" data-page="1">
+                                    <div class="page-content">
+                                        <div class="page-image" style="background: linear-gradient(135deg, #1a3a5c 0%, #2d5a7b 100%);">
+                                            <div class="placeholder-image">
+                                                <span class="image-icon">💧</span>
+                                                <span class="image-title" data-zh="趵突泉·民国时期" data-en="Baotu Spring · Republic Era">趵突泉·民国时期</span>
+                                            </div>
+                                        </div>
+                                        <div class="page-info">
+                                            <h4 data-zh="趵突泉旧影" data-en="Old Baotu Spring">趵突泉旧影</h4>
+                                            <p data-zh="民国时期的趵突泉，三股泉水喷涌而出，游人如织。泉水清澈甘甜，吸引了无数文人墨客驻足观赏。" data-en="Baotu Spring during the Republic era, with three springs gushing and visitors thronging.">民国时期的趵突泉，三股泉水喷涌而出，游人如织。</p>
+                                            <span class="page-year">1920s</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 第2页 -->
+                                <div class="flipbook-page" data-page="2">
+                                    <div class="page-content">
+                                        <div class="page-image" style="background: linear-gradient(135deg, #2c5545 0%, #3d7a5f 100%);">
+                                            <div class="placeholder-image">
+                                                <span class="image-icon">🌊</span>
+                                                <span class="image-title" data-zh="大明湖·清代" data-en="Daming Lake · Qing Dynasty">大明湖·清代</span>
+                                            </div>
+                                        </div>
+                                        <div class="page-info">
+                                            <h4 data-zh="大明湖风光" data-en="Daming Lake Scenery">大明湖风光</h4>
+                                            <p data-zh="清代的大明湖，荷花盛开，画舫穿行。历下亭矗立湖心，文人雅士在此吟诗作对。" data-en="Daming Lake in Qing Dynasty with lotus blooming and painted boats.">清代的大明湖，荷花盛开，画舫穿行。</p>
+                                            <span class="page-year">1890s</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 第3页 -->
+                                <div class="flipbook-page" data-page="3">
+                                    <div class="page-content">
+                                        <div class="page-image" style="background: linear-gradient(135deg, #4a3c2a 0%, #6b5a3d 100%);">
+                                            <div class="placeholder-image">
+                                                <span class="image-icon">🏯</span>
+                                                <span class="image-title" data-zh="芙蓉街·明清" data-en="Furong Street · Ming-Qing">芙蓉街·明清</span>
+                                            </div>
+                                        </div>
+                                        <div class="page-info">
+                                            <h4 data-zh="芙蓉街旧貌" data-en="Old Furong Street">芙蓉街旧貌</h4>
+                                            <p data-zh="明清时期的芙蓉街，青石板路两侧商铺林立，泉水穿街而过，呈现泉城独特风貌。" data-en="Furong Street in Ming-Qing era with stone paths and springs.">明清时期的芙蓉街，青石板路两侧商铺林立。</p>
+                                            <span class="page-year">1800s</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 第4页 -->
+                                <div class="flipbook-page" data-page="4">
+                                    <div class="page-content">
+                                        <div class="page-image" style="background: linear-gradient(135deg, #3a4a5c 0%, #5a6a7b 100%);">
+                                            <div class="placeholder-image">
+                                                <span class="image-icon">🚢</span>
+                                                <span class="image-title" data-zh="护城河·民国" data-en="City Moat · Republic Era">护城河·民国</span>
+                                            </div>
+                                        </div>
+                                        <div class="page-info">
+                                            <h4 data-zh="护城河游船" data-en="City Moat Boat Tour">护城河游船</h4>
+                                            <p data-zh="民国时期的护城河，游船缓缓驶过，两岸柳树成荫，市民悠闲漫步。" data-en="City moat in Republic era with boats and willow trees.">民国时期的护城河，游船缓缓驶过，两岸柳树成荫。</p>
+                                            <span class="page-year">1930s</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 第5页 -->
+                                <div class="flipbook-page" data-page="5">
+                                    <div class="page-content">
+                                        <div class="page-image" style="background: linear-gradient(135deg, #5c4a3a 0%, #7b6a5a 100%);">
+                                            <div class="placeholder-image">
+                                                <span class="image-icon">🏛️</span>
+                                                <span class="image-title" data-zh="经纬路·近代" data-en="Jingwei Road · Modern Era">经纬路·近代</span>
+                                            </div>
+                                        </div>
+                                        <div class="page-info">
+                                            <h4 data-zh="商埠区街景" data-en="Commercial Port Streets">商埠区街景</h4>
+                                            <p data-zh="近代济南开埠后，经纬路一带西式建筑拔地而起，中西文化在此交融。" data-en="Jingwei Road area with Western-style buildings after Jinan opened to trade.">近代济南开埠后，经纬路一带西式建筑拔地而起。</p>
+                                            <span class="page-year">1920s</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 第6页 -->
+                                <div class="flipbook-page" data-page="6">
+                                    <div class="page-content">
+                                        <div class="page-image" style="background: linear-gradient(135deg, #2a4a3c 0%, #4a6a5c 100%);">
+                                            <div class="placeholder-image">
+                                                <span class="image-icon">🌿</span>
+                                                <span class="image-title" data-zh="曲水亭街·清代" data-en="Qushuiting Street · Qing">曲水亭街·清代</span>
+                                            </div>
+                                        </div>
+                                        <div class="page-info">
+                                            <h4 data-zh="曲水亭街水乡" data-en="Qushuiting Water Town">曲水亭街水乡</h4>
+                                            <p data-zh="清代曲水亭街，小桥流水人家，展现了济南独有的水乡风貌，被誉为'家家泉水，户户垂杨'。" data-en="Qushuiting Street showing Jinan's unique water town charm.">清代曲水亭街，小桥流水人家，展现济南独有的水乡风貌。</p>
+                                            <span class="page-year">1880s</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 翻页控制 -->
+                        <div class="flipbook-controls">
+                            <button class="flip-btn prev-btn" onclick="prevPage()">
+                                <span>◀</span>
+                                <span data-zh="上一页" data-en="Previous">上一页</span>
+                            </button>
+                            <div class="page-indicator">
+                                <span id="currentPage">1</span> / <span id="totalPages">6</span>
+                            </div>
+                            <button class="flip-btn next-btn" onclick="nextPage()">
+                                <span data-zh="下一页" data-en="Next">下一页</span>
+                                <span>▶</span>
+                            </button>
+                        </div>
+
+                        <!-- 触摸滑动提示 -->
+                        <div class="swipe-hint" data-zh="← 左右滑动翻页 →" data-en="← Swipe to turn pages →">
+                            ← 左右滑动翻页 →
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 全景漫游模式 -->
+            <div class="tour-content" id="panoramaMode" style="display: none;">
+                <div class="panorama-container">
+                    <div class="panorama-header">
+                        <h3 data-zh="360° 全景漫游" data-en="360° Panorama Tour">360° 全景漫游</h3>
+                        <p data-zh="拖动鼠标或触摸屏幕，探索济南水系文化景点的全景风貌" data-en="Drag mouse or touch screen to explore Jinan's water culture sites">拖动鼠标或触摸屏幕，探索济南水系文化景点的全景风貌</p>
+                    </div>
+
+                    <!-- 场景选择 -->
+                    <div class="scene-selector">
+                        <button class="scene-btn active" data-scene="daminglake" onclick="switchScene('daminglake')">
+                            <span class="scene-icon">🌊</span>
+                            <span data-zh="大明湖" data-en="Daming Lake">大明湖</span>
+                        </button>
+                        <button class="scene-btn" data-scene="baotu" onclick="switchScene('baotu')">
+                            <span class="scene-icon">💧</span>
+                            <span data-zh="趵突泉" data-en="Baotu Spring">趵突泉</span>
+                        </button>
+                        <button class="scene-btn" data-scene="furong" onclick="switchScene('furong')">
+                            <span class="scene-icon">🏯</span>
+                            <span data-zh="芙蓉街" data-en="Furong Street">芙蓉街</span>
+                        </button>
+                        <button class="scene-btn" data-scene="moat" onclick="switchScene('moat')">
+                            <span class="scene-icon">🚢</span>
+                            <span data-zh="护城河" data-en="City Moat">护城河</span>
+                        </button>
+                    </div>
+
+                    <!-- 全景查看器 -->
+                    <div class="panorama-viewer" id="panoramaViewer">
+                        <div class="panorama-canvas" id="panoramaCanvas">
+                            <!-- 模拟全景图 -->
+                            <div class="panorama-scene" id="panoramaScene">
+                                <div class="panorama-inner">
+                                    <!-- 场景内容通过JS动态渲染 -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 热点标注 -->
+                        <div class="panorama-hotspots" id="panoramaHotspots">
+                            <div class="hotspot" style="top: 40%; left: 30%;" data-info="zh:历下亭|en:Lixia Pavilion">
+                                <span class="hotspot-marker">📍</span>
+                                <div class="hotspot-tooltip">
+                                    <h5 data-zh="历下亭" data-en="Lixia Pavilion">历下亭</h5>
+                                    <p data-zh="大明湖标志性建筑" data-en="Landmark of Daming Lake">大明湖标志性建筑</p>
+                                </div>
+                            </div>
+                            <div class="hotspot" style="top: 50%; left: 60%;" data-info="zh:荷花池|en:Lotus Pond">
+                                <span class="hotspot-marker">📍</span>
+                                <div class="hotspot-tooltip">
+                                    <h5 data-zh="荷花池" data-en="Lotus Pond">荷花池</h5>
+                                    <p data-zh="夏季荷花盛开" data-en="Lotus blooms in summer">夏季荷花盛开</p>
+                                </div>
+                            </div>
+                            <div class="hotspot" style="top: 35%; left: 75%;" data-info="zh:铁公祠|en:Tie Gong Shrine">
+                                <span class="hotspot-marker">📍</span>
+                                <div class="hotspot-tooltip">
+                                    <h5 data-zh="铁公祠" data-en="Tie Gong Shrine">铁公祠</h5>
+                                    <p data-zh="纪念铁铉的祠堂" data-en="Shrine dedicated to Tie Xuan">纪念铁铉的祠堂</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 控制按钮 -->
+                        <div class="panorama-controls">
+                            <button class="pano-btn" onclick="zoomIn()" title="放大">+</button>
+                            <button class="pano-btn" onclick="zoomOut()" title="缩小">−</button>
+                            <button class="pano-btn" onclick="resetView()" title="重置">↺</button>
+                            <button class="pano-btn fullscreen-btn" onclick="toggleFullscreen()" title="全屏">⛶</button>
+                        </div>
+
+                        <!-- 操作提示 -->
+                        <div class="panorama-hint">
+                            <span data-zh="🖱️ 拖动旋转 | 滚轮缩放" data-en="🖱️ Drag to rotate | Scroll to zoom">🖱️ 拖动旋转 | 滚轮缩放</span>
+                        </div>
+                    </div>
+
+                    <!-- 场景信息 -->
+                    <div class="scene-info">
+                        <h4 id="sceneTitle" data-zh="大明湖全景" data-en="Daming Lake Panorama">大明湖全景</h4>
+                        <p id="sceneDesc" data-zh="大明湖是济南三大名胜之一，由众泉汇流而成，面积46公顷，素有'四面荷花三面柳，一城山色半城湖'的美誉。" data-en="Daming Lake is one of Jinan's three famous attractions, fed by numerous springs.">大明湖是济南三大名胜之一，由众泉汇流而成，面积46公顷，素有'四面荷花三面柳，一城山色半城湖'的美誉。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 时空地图 -->
+    <section id="map" class="map-section">
+        <div class="container">
+            <h2 class="section-title" data-zh="时空地图" data-en="Time-Space Map">时空地图</h2>
+            <div class="map-intro">
+                <p data-zh="多维度展示济南水系文化空间分布与历史演变" data-en="Multi-dimensional display of Jinan water culture's spatial distribution and historical evolution">多维度展示济南水系文化空间分布与历史演变</p>
+            </div>
+
+            <div class="map-container">
+                <div class="map-controls">
+                    <div class="map-filter">
+                        <label data-zh="图层选择：" data-en="Layer Selection:">图层选择：</label>
+                        <select id="mapLayer">
+                            <option value="all" data-zh="全部图层" data-en="All Layers">全部图层</option>
+                            <option value="spring" data-zh="泉水分布" data-en="Spring Distribution">泉水分布</option>
+                            <option value="culture" data-zh="文化点位" data-en="Cultural Sites">文化点位</option>
+                            <option value="water" data-zh="水系脉络" data-en="Water System">水系脉络</option>
+                        </select>
+                    </div>
+                    <div class="map-filter">
+                        <label data-zh="时期选择：" data-en="Time Period:">时期选择：</label>
+                        <select id="mapPeriod">
+                            <option value="now" data-zh="当代" data-en="Contemporary">当代</option>
+                            <option value="ming" data-zh="明代" data-en="Ming Dynasty">明代</option>
+                            <option value="qing" data-zh="清代" data-en="Qing Dynasty">清代</option>
+                            <option value="republic" data-zh="民国" data-en="Republic Era">民国</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="map-display">
+                    <div class="map-placeholder" id="mapPlaceholder">
+                        <div class="map-content">
+                            <div class="map-point spring" style="top: 30%; left: 45%;" data-name="趵突泉">
+                                <span class="point-marker">💧</span>
+                                <span class="point-label">趵突泉</span>
+                            </div>
+                            <div class="map-point spring" style="top: 35%; left: 55%;" data-name="黑虎泉">
+                                <span class="point-marker">💧</span>
+                                <span class="point-label">黑虎泉</span>
+                            </div>
+                            <div class="map-point culture" style="top: 40%; left: 40%;" data-name="大明湖">
+                                <span class="point-marker">🏛️</span>
+                                <span class="point-label">大明湖</span>
+                            </div>
+                            <div class="map-point culture" style="top: 25%; left: 60%;" data-name="解放阁">
+                                <span class="point-marker">⭐</span>
+                                <span class="point-label">解放阁</span>
+                            </div>
+                            <div class="map-point water" style="top: 50%; left: 30%;" data-name="小清河">
+                                <span class="point-marker">🌊</span>
+                                <span class="point-label">小清河</span>
+                            </div>
+                            <div class="water-line" style="top: 42%; left: 35%; width: 40%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="map-legend">
+                        <div class="legend-item">
+                            <span class="legend-marker spring">💧</span>
+                            <span data-zh="泉水" data-en="Spring">泉水</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-marker culture">🏛️</span>
+                            <span data-zh="文化点位" data-en="Cultural Site">文化点位</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-marker water">🌊</span>
+                            <span data-zh="水系" data-en="Water System">水系</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-zh="关于我们" data-en="About Us">关于我们</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 data-zh="项目团队" data-en="Project Team">项目团队</h3>
+                    <p data-zh="本项目由大学生创新创业团队开发，旨在运用数字人文技术，推动济南水系文化的保护、传承与创新传播。" data-en="This project is developed by a student innovation team to promote Jinan's water culture preservation and innovation.">
+                        本项目由大学生创新创业团队开发，旨在运用数字人文技术，推动济南水系文化的保护、传承与创新传播。
+                    </p>
+
+                    <div class="team-members">
+                        <div class="member">
+                            <div class="member-avatar">👨‍💻</div>
+                            <div class="member-info">
+                                <h4 data-zh="技术开发" data-en="Technical Development">技术开发</h4>
+                                <p data-zh="负责平台架构设计与前端开发" data-en="Platform architecture and frontend development">负责平台架构设计与前端开发</p>
+                            </div>
+                        </div>
+                        <div class="member">
+                            <div class="member-avatar">📚</div>
+                            <div class="member-info">
+                                <h4 data-zh="内容研究" data-en="Content Research">内容研究</h4>
+                                <p data-zh="负责文化资源整理与知识图谱构建" data-en="Cultural resources organization and knowledge graph construction">负责文化资源整理与知识图谱构建</p>
+                            </div>
+                        </div>
+                        <div class="member">
+                            <div class="member-avatar">🎨</div>
+                            <div class="member-info">
+                                <h4 data-zh="视觉设计" data-en="Visual Design">视觉设计</h4>
+                                <p data-zh="负责界面设计与用户体验优化" data-en="Interface design and UX optimization">负责界面设计与用户体验优化</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3 data-zh="联系我们" data-en="Contact Us">联系我们</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" required data-placeholder-zh="您的姓名" data-placeholder-en="Your Name" placeholder="您的姓名">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" required data-placeholder-zh="电子邮箱" data-placeholder-en="Email" placeholder="电子邮箱">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="4" required data-placeholder-zh="您的留言..." data-placeholder-en="Your Message..." placeholder="您的留言..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-zh="提交留言" data-en="Submit">提交留言</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">💧</span>
+                    <span class="logo-text" data-zh="济南水系文化数字人文平台" data-en="Jinan Water Culture Digital Humanities Platform">济南水系文化数字人文平台</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#home" data-zh="首页" data-en="Home">首页</a>
+                    <a href="#about" data-zh="平台介绍" data-en="About">平台介绍</a>
+                    <a href="#resources" data-zh="文化资源" data-en="Resources">文化资源</a>
+                    <a href="#ai" data-zh="AI智能体" data-en="AI Agent">AI智能体</a>
+                    <a href="#tour" data-zh="虚拟漫游" data-en="Virtual Tour">虚拟漫游</a>
+                    <a href="#map" data-zh="时空地图" data-en="Time-Space Map">时空地图</a>
+                    <a href="#contact" data-zh="关于我们" data-en="Contact">关于我们</a>
+                </div>
+                <div class="footer-copyright">
+                    <p data-zh="© 2024 济南水系文化数字人文平台 | 大学生创新创业项目" data-en="© 2024 Jinan Water Culture Digital Humanities Platform | Student Innovation Project">
+                        © 2024 济南水系文化数字人文平台 | 大学生创新创业项目
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部 -->
+    <button class="back-to-top" id="backToTop" title="返回顶部">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
