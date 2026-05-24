@@ -408,15 +408,19 @@
 
             <!-- 模式切换 -->
             <div class="tour-mode-switch">
-                <button class="mode-btn active" data-mode="album" onclick="switchTourMode('album')">
-                    <span class="mode-icon">📷</span>
-                    <span data-zh="老照片相册" data-en="Photo Album">老照片相册</span>
-                </button>
-                <button class="mode-btn" data-mode="panorama" onclick="switchTourMode('panorama')">
-                    <span class="mode-icon">🌐</span>
-                    <span data-zh="全景漫游" data-en="360° Panorama">全景漫游</span>
-                </button>
-            </div>
+      <button class="mode-btn active" data-mode="album" onclick="switchTourMode('album')">
+          <span class="mode-icon">📷</span>
+          <span data-zh="老照片相册" data-en="Photo Album">老照片相册</span>
+      </button>
+      <button class="mode-btn" data-mode="panorama" onclick="switchTourMode('panorama')">
+          <span class="mode-icon">🌐</span>
+          <span data-zh="全景漫游" data-en="360° Panorama">全景漫游</span>
+      </button>
+      <button class="mode-btn" data-mode="flipbook" onclick="switchTourMode('flipbook')">
+          <span class="mode-icon">📖</span>
+          <span data-zh="Flipbook翻书" data-en="Flipbook">Flipbook翻书</span>
+      </button>
+  </div>
 
             <!-- 老照片相册模式 -->
             <div class="tour-content" id="albumMode">
@@ -638,6 +642,76 @@
                     <div class="scene-info">
                         <h4 id="sceneTitle" data-zh="大明湖全景" data-en="Daming Lake Panorama">大明湖全景</h4>
                         <p id="sceneDesc" data-zh="大明湖是济南三大名胜之一，由众泉汇流而成，面积46公顷，素有'四面荷花三面柳，一城山色半城湖'的美誉。" data-en="Daming Lake is one of Jinan's three famous attractions, fed by numerous springs.">大明湖是济南三大名胜之一，由众泉汇流而成，面积46公顷，素有'四面荷花三面柳，一城山色半城湖'的美誉。</p>
+                        <!-- Flipbook翻书模式 -->
+  <div class="tour-content" id="flipbookMode" style="display: none;">
+      <div class="flipbook-showcase">
+          <div class="showcase-section">
+              <div class="section-header">
+                  <h3 data-zh="精选画册展示" data-en="Featured Flipbook">精选画册展示</h3>
+                  <p data-zh="浏览 AI 生成的济南水系文化画册" data-en="Browse AI-generated Jinan water culture flipbooks">浏览 AI
+   生成的济南水系文化画册</p>
+              </div>
+
+              <div class="flipbook-cards">
+                  <div class="flipbook-card" onclick="loadFlipbook('https://flipbook.page/n/129aa098b45947e2ada58a52ae2bea88',
+  '大明湖：济南明珠')">
+                      <div class="card-cover">
+                          <span class="card-icon">🌊</span>
+                      </div>
+                      <div class="card-info">
+                          <h4 data-zh="大明湖：济南明珠" data-en="Daming Lake">大明湖：济南明珠</h4>
+                          <p data-zh="探索大明湖的自然风光与人文历史" data-en="Explore the natural beauty and cultural
+  history">探索大明湖的自然风光与人文历史</p>
+                          <span class="view-btn" data-zh="查看画册" data-en="View">查看画册</span>
+                      </div>
+                  </div>
+
+                  <div class="flipbook-card add-card" onclick="openFlipbookCreator()">
+                      <div class="card-cover add-cover">
+                          <span class="card-icon">➕</span>
+                      </div>
+                      <div class="card-info">
+                          <h4 data-zh="创建您的画册" data-en="Create Your Own">创建您的画册</h4>
+                          <p data-zh="输入关键词，AI 为您生成专属画册" data-en="Enter keywords to generate your
+  flipbook">输入关键词，AI 为您生成专属画册</p>
+                          <span class="view-btn" data-zh="开始创作" data-en="Create">开始创作</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="flipbook-viewer" id="flipbookViewer" style="display: none;">
+              <div class="viewer-header">
+                  <button class="back-btn" onclick="closeFlipbookViewer()">
+                      <span>←</span>
+                      <span data-zh="返回画册列表" data-en="Back to list">返回画册列表</span>
+                  </button>
+                  <h4 id="viewerTitle">画册标题</h4>
+                  <a id="viewerLink" href="#" target="_blank" class="external-link-btn">
+                      <span>↗</span>
+                      <span data-zh="新窗口打开" data-en="Open in new tab">新窗口打开</span>
+                  </a>
+              </div>
+              <div class="viewer-frame-wrapper">
+                  <iframe id="flipbookFrame" src="" width="100%" height="600" frameborder="0" allowfullscreen
+  loading="lazy"></iframe>
+              </div>
+          </div>
+
+          <div class="creator-guide">
+              <div class="guide-content">
+                  <h4 data-zh="🎨 想创作专属画册？" data-en="🎨 Create Your Own?">🎨 想创作专属画册？</h4>
+                  <p data-zh="前往 Flipbook.page，输入您的主题关键词（如"趵突泉历史"、"济南老街"），AI
+  将为您生成精美的翻书画册！" data-en="Go to Flipbook.page to create your flipbook.">前往 Flipbook.page，输入您的主题关键词，AI
+  将为您生成精美的翻书画册！</p>
+                  <a href="https://flipbook.page" target="_blank" class="creator-link">
+                      <span data-zh="前往 Flipbook.page 创作" data-en="Go to Flipbook.page">前往 Flipbook.page 创作</span>
+                      <span>→</span>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>                      
                     </div>
                 </div>
             </div>
