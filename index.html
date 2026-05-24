@@ -423,12 +423,39 @@ function switchTab(tabName) {
     </section>
 
     <!-- 虚拟漫游 -->
-    <section id="tour" class="tour-section">
-        <div class="container">
-            <h2 class="section-title" data-zh="虚拟漫游" data-en="Virtual Tour">虚拟漫游</h2>
-            <div class="tour-intro">
-                <p data-zh="沉浸式体验济南古城水系的历史风貌，穿越时空感受泉城魅力" data-en="Immersive experience of Jinan's ancient water system history">沉浸式体验济南古城水系的历史风貌，穿越时空感受泉城魅力</p>
-            </div>
+虚拟漫游
+沉浸式体验济南古城水系的历史风貌，穿越时空感受泉城魅力
+
+<div style="display: flex; justify-content: center; gap: 20px; margin: 30px 0; flex-wrap: wrap;">
+  <button style="padding: 10px 24px; border: none; border-radius: 24px; background: #3498db; color: white; font-size: 1rem;">📷 老照片相册</button>
+  <button style="padding: 10px 24px; border: 1px solid #ddd; border-radius: 24px; background: white; color: #333; font-size: 1rem;">🌐 全景漫游</button>
+</div>
+
+ 济南水系历史影像集
+翻阅珍贵历史照片，见证济南水系的百年变迁
+
+<!-- Flipbook 翻页书 直接嵌入 -->
+<div style="width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.15); margin: 20px 0;">
+  <!-- 响应式容器 16:9比例 适配所有设备 -->
+  <div style="position: relative; width: 100%; padding-top: 56.25%;">
+    <iframe 
+      src="https://flipbook.page/?utm_source=chatgpt.com" 
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+      allowfullscreen="true"
+      allow="autoplay; fullscreen"
+      scrolling="no"
+    ></iframe>
+  </div>
+</div>
+
+<p style="text-align: center; color: #666; font-size: 0.9rem; margin-bottom: 30px;">点击翻页书右下角全屏按钮，可沉浸式翻阅济南历史老照片</p>
+
+ 360° 全景漫游
+拖动鼠标或触摸屏幕，探索济南水系文化景点的全景风貌
+
+<div style="text-align: center; color: #888; padding: 40px 0; background: #f8fafc; border-radius: 12px;">
+全景漫游内容正在完善中，敬请期待...
+</div>
 
             <!-- 模式切换 -->
             <div class="tour-mode-switch">
