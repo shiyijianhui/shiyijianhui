@@ -670,7 +670,7 @@ function switchTab(tabName) {
   </div>
 </div>
 
-<!-- GIS地图容器 强制加高度 确保渲染 -->
+<!-- GIS地图容器 -->
 <div id="jinan-map" style="width: 100% !important; height: 500px !important; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.15); margin: 20px 0; z-index: 1;"></div>
 
 <!-- 图例 -->
@@ -685,15 +685,37 @@ function switchTab(tabName) {
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
-// 等页面完全加载后再初始化地图 解决空白问题
 window.onload = function() {
-  // 初始化地图 中心点济南趵突泉
-  const map = L.map('jinan-map').setView([36.6667, 117.0333], 13);
+  // 济南初始中心点和缩放级别
+  const JINAN_CENTER = [36.6667, 117.0333];
+  const DEFAULT_ZOOM = 13;
 
-  // 换成国内秒加载的高德地图底图 解决加载不出来的问题
+  // 初始化地图
+  const map = L.map('jinan-map', {
+    // 🔴 限制拖动范围：只能在济南市区内 拖不出去
+    maxBounds: [
+      [36.4, 116.8], // 济南西南边界
+      [36.9, 117.3]  // 济南东北边界
+    ],
+    // 🔴 限制缩放级别：最小11（看济南全市） 最大16（看街道）
+    minZoom: 11,
+    maxZoom: 16,
+    // 超出边界自动弹回
+    maxBoundsViscosity: 1.0
+  }).setView(JINAN_CENTER, DEFAULT_ZOOM);
+
+  // 加载高德底图
   L.tileLayer('https://webrd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}', {
     subdomains: ['1', '2', '3', '4'],
     attribution: '&copy; 高德地图'
+  }).addTo(map);
+
+  // 🔴 加一键复位按钮（右上角蓝色按钮）
+  L.easyButton('fa-home', function(){
+    map.setView(JINAN_CENTER, DEFAULT_ZOOM);
+  }, {
+    position: 'topright',
+    title: '回到济南视角'
   }).addTo(map);
 
   // 济南泉水点位
@@ -751,6 +773,9 @@ window.onload = function() {
   }
 }
 </script>
+<!-- 引入复位按钮的图标库 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
+<script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
 
     <!-- 关于我们 -->
     <section id="contact" class="contact">
