@@ -454,128 +454,30 @@ function switchTab(tabName) {
                         <p data-zh="翻阅珍贵历史照片，见证济南水系的百年变迁" data-en="Browse precious historical photos witnessing Jinan's century-long transformation">翻阅珍贵历史照片，见证济南水系的百年变迁</p>
                     </div>
 
-                    <div class="flipbook-wrapper">
-                        <div class="flipbook" id="flipbook">
-                            <div class="flipbook-pages">
-                                <!-- 第1页 -->
-                                <div class="flipbook-page" data-page="1">
-                                    <div class="page-content">
-                                        <div class="page-image" style="background: linear-gradient(135deg, #1a3a5c 0%, #2d5a7b 100%);">
-                                            <div class="placeholder-image">
-                                                <span class="image-icon">💧</span>
-                                                <span class="image-title" data-zh="趵突泉·民国时期" data-en="Baotu Spring · Republic Era">趵突泉·民国时期</span>
-                                            </div>
-                                        </div>
-                                        <div class="page-info">
-                                            <h4 data-zh="趵突泉旧影" data-en="Old Baotu Spring">趵突泉旧影</h4>
-                                            <p data-zh="民国时期的趵突泉，三股泉水喷涌而出，游人如织。泉水清澈甘甜，吸引了无数文人墨客驻足观赏。" data-en="Baotu Spring during the Republic era, with three springs gushing and visitors thronging.">民国时期的趵突泉，三股泉水喷涌而出，游人如织。</p>
-                                            <span class="page-year">1920s</span>
-                                        </div>
-                                    </div>
-                                </div>
+                    ### 古籍文献影像
+历代古籍中的济南水系记载，见证泉城千年历史
 
-                                <!-- 第2页 -->
-                                <div class="flipbook-page" data-page="2">
-                                    <div class="page-content">
-                                        <div class="page-image" style="background: linear-gradient(135deg, #2c5545 0%, #3d7a5f 100%);">
-                                            <div class="placeholder-image">
-                                                <span class="image-icon">🌊</span>
-                                                <span class="image-title" data-zh="大明湖·清代" data-en="Daming Lake · Qing Dynasty">大明湖·清代</span>
-                                            </div>
-                                        </div>
-                                        <div class="page-info">
-                                            <h4 data-zh="大明湖风光" data-en="Daming Lake Scenery">大明湖风光</h4>
-                                            <p data-zh="清代的大明湖，荷花盛开，画舫穿行。历下亭矗立湖心，文人雅士在此吟诗作对。" data-en="Daming Lake in Qing Dynasty with lotus blooming and painted boats.">清代的大明湖，荷花盛开，画舫穿行。</p>
-                                            <span class="page-year">1890s</span>
-                                        </div>
-                                    </div>
-                                </div>
+<!-- 横向滑动轮播容器 原生支持左右滑动 手机电脑都能用 -->
+<div style="display: flex; gap: 20px; overflow-x: auto; padding: 10px 0 20px; scroll-behavior: smooth; scrollbar-width: thin;">
+  <!-- 古籍图1 -->
+  <div style="min-width: 280px; height: 200px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); flex-shrink: 0;">
+    <img src="jinanfushuzongtu.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="古籍1">
+  </div>
+  <!-- 古籍图2 -->
+  <div style="min-width: 280px; height: 200px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); flex-shrink: 0;">
+    <img src="daxioaqinghetu.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="古籍2">
+  </div>
+  <!-- 古籍图3 -->
+  <div style="min-width: 280px; height: 200px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); flex-shrink: 0;">
+    <img src="shengchengjiexiangquantu.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="古籍3">
+  </div>
+  <!-- 古籍图4 -->
+  <div style="min-width: 280px; height: 200px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); flex-shrink: 0;">
+    <img src="jinanfuchengtu.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="古籍4">
+  </div>
+</div>
 
-                                <!-- 第3页 -->
-                                <div class="flipbook-page" data-page="3">
-                                    <div class="page-content">
-                                        <div class="page-image" style="background: linear-gradient(135deg, #4a3c2a 0%, #6b5a3d 100%);">
-                                            <div class="placeholder-image">
-                                                <span class="image-icon">🏯</span>
-                                                <span class="image-title" data-zh="芙蓉街·明清" data-en="Furong Street · Ming-Qing">芙蓉街·明清</span>
-                                            </div>
-                                        </div>
-                                        <div class="page-info">
-                                            <h4 data-zh="芙蓉街旧貌" data-en="Old Furong Street">芙蓉街旧貌</h4>
-                                            <p data-zh="明清时期的芙蓉街，青石板路两侧商铺林立，泉水穿街而过，呈现泉城独特风貌。" data-en="Furong Street in Ming-Qing era with stone paths and springs.">明清时期的芙蓉街，青石板路两侧商铺林立。</p>
-                                            <span class="page-year">1800s</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 第4页 -->
-                                <div class="flipbook-page" data-page="4">
-                                    <div class="page-content">
-                                        <div class="page-image" style="background: linear-gradient(135deg, #3a4a5c 0%, #5a6a7b 100%);">
-                                            <div class="placeholder-image">
-                                                <span class="image-icon">🚢</span>
-                                                <span class="image-title" data-zh="护城河·民国" data-en="City Moat · Republic Era">护城河·民国</span>
-                                            </div>
-                                        </div>
-                                        <div class="page-info">
-                                            <h4 data-zh="护城河游船" data-en="City Moat Boat Tour">护城河游船</h4>
-                                            <p data-zh="民国时期的护城河，游船缓缓驶过，两岸柳树成荫，市民悠闲漫步。" data-en="City moat in Republic era with boats and willow trees.">民国时期的护城河，游船缓缓驶过，两岸柳树成荫。</p>
-                                            <span class="page-year">1930s</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 第5页 -->
-                                <div class="flipbook-page" data-page="5">
-                                    <div class="page-content">
-                                        <div class="page-image" style="background: linear-gradient(135deg, #5c4a3a 0%, #7b6a5a 100%);">
-                                            <div class="placeholder-image">
-                                                <span class="image-icon">🏛️</span>
-                                                <span class="image-title" data-zh="经纬路·近代" data-en="Jingwei Road · Modern Era">经纬路·近代</span>
-                                            </div>
-                                        </div>
-                                        <div class="page-info">
-                                            <h4 data-zh="商埠区街景" data-en="Commercial Port Streets">商埠区街景</h4>
-                                            <p data-zh="近代济南开埠后，经纬路一带西式建筑拔地而起，中西文化在此交融。" data-en="Jingwei Road area with Western-style buildings after Jinan opened to trade.">近代济南开埠后，经纬路一带西式建筑拔地而起。</p>
-                                            <span class="page-year">1920s</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 第6页 -->
-                                <div class="flipbook-page" data-page="6">
-                                    <div class="page-content">
-                                        <div class="page-image" style="background: linear-gradient(135deg, #2a4a3c 0%, #4a6a5c 100%);">
-                                            <div class="placeholder-image">
-                                                <span class="image-icon">🌿</span>
-                                                <span class="image-title" data-zh="曲水亭街·清代" data-en="Qushuiting Street · Qing">曲水亭街·清代</span>
-                                            </div>
-                                        </div>
-                                        <div class="page-info">
-                                            <h4 data-zh="曲水亭街水乡" data-en="Qushuiting Water Town">曲水亭街水乡</h4>
-                                            <p data-zh="清代曲水亭街，小桥流水人家，展现了济南独有的水乡风貌，被誉为'家家泉水，户户垂杨'。" data-en="Qushuiting Street showing Jinan's unique water town charm.">清代曲水亭街，小桥流水人家，展现济南独有的水乡风貌。</p>
-                                            <span class="page-year">1880s</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 翻页控制 -->
-                        <div class="flipbook-controls">
-                            <button class="flip-btn prev-btn" onclick="prevPage()">
-                                <span>◀</span>
-                                <span data-zh="上一页" data-en="Previous">上一页</span>
-                            </button>
-                            <div class="page-indicator">
-                                <span id="currentPage">1</span> / <span id="totalPages">6</span>
-                            </div>
-                            <button class="flip-btn next-btn" onclick="nextPage()">
-                                <span data-zh="下一页" data-en="Next">下一页</span>
-                                <span>▶</span>
-                            </button>
-                        </div>
-
+<p style="text-align: center; color: #888; font-size: 0.85rem;">← 左右滑动查看更多古籍影像 →</p>
                         <!-- 触摸滑动提示 -->
                         <div class="swipe-hint" data-zh="← 左右滑动翻页 →" data-en="← Swipe to turn pages →">
                             ← 左右滑动翻页 →
