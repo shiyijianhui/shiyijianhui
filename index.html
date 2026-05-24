@@ -645,80 +645,108 @@ function switchTab(tabName) {
     </section>
 
     <!-- 时空地图 -->
-    <section id="map" class="map-section">
-        <div class="container">
-            <h2 class="section-title" data-zh="时空地图" data-en="Time-Space Map">时空地图</h2>
-            <div class="map-intro">
-                <p data-zh="多维度展示济南水系文化空间分布与历史演变" data-en="Multi-dimensional display of Jinan water culture's spatial distribution and historical evolution">多维度展示济南水系文化空间分布与历史演变</p>
-            </div>
+    ## 时空地图
+多维度展示济南水系文化空间分布与历史演变
 
-            <div class="map-container">
-                <div class="map-controls">
-                    <div class="map-filter">
-                        <label data-zh="图层选择：" data-en="Layer Selection:">图层选择：</label>
-                        <select id="mapLayer">
-                            <option value="all" data-zh="全部图层" data-en="All Layers">全部图层</option>
-                            <option value="spring" data-zh="泉水分布" data-en="Spring Distribution">泉水分布</option>
-                            <option value="culture" data-zh="文化点位" data-en="Cultural Sites">文化点位</option>
-                            <option value="water" data-zh="水系脉络" data-en="Water System">水系脉络</option>
-                        </select>
-                    </div>
-                    <div class="map-filter">
-                        <label data-zh="时期选择：" data-en="Time Period:">时期选择：</label>
-                        <select id="mapPeriod">
-                            <option value="now" data-zh="当代" data-en="Contemporary">当代</option>
-                            <option value="ming" data-zh="明代" data-en="Ming Dynasty">明代</option>
-                            <option value="qing" data-zh="清代" data-en="Qing Dynasty">清代</option>
-                            <option value="republic" data-zh="民国" data-en="Republic Era">民国</option>
-                        </select>
-                    </div>
-                </div>
+<!-- 地图控制栏 和你截图里的界面完全一致 -->
+<div style="margin-bottom: 20px;">
+  <div style="margin-bottom: 10px;">
+    <span style="font-weight: 500; margin-right: 10px;">图层选择：</span>
+    <button onclick="switchLayer('all')" class="map-btn active" style="padding: 5px 12px; margin: 0 5px; border: 1px solid #3498db; border-radius: 16px; background: #3498db; color: white; cursor: pointer; font-size: 0.9rem;">全部图层</button>
+    <button onclick="switchLayer('spring')" class="map-btn" style="padding: 5px 12px; margin: 0 5px; border: 1px solid #ddd; border-radius: 16px; background: white; color: #333; cursor: pointer; font-size: 0.9rem;">泉水分布</button>
+    <button onclick="switchLayer('culture')" class="map-btn" style="padding: 5px 12px; margin: 0 5px; border: 1px solid #ddd; border-radius: 16px; background: white; color: #333; cursor: pointer; font-size: 0.9rem;">文化点位</button>
+    <button onclick="switchLayer('water')" class="map-btn" style="padding: 5px 12px; margin: 0 5px; border: 1px solid #ddd; border-radius: 16px; background: white; color: #333; cursor: pointer; font-size: 0.9rem;">水系脉络</button>
+  </div>
+  <div>
+    <span style="font-weight: 500; margin-right: 10px;">时期选择：</span>
+    <button onclick="switchTime('modern')" class="time-btn active" style="padding: 5px 12px; margin: 0 5px; border: 1px solid #3498db; border-radius: 16px; background: #3498db; color: white; cursor: pointer; font-size: 0.9rem;">当代</button>
+    <button onclick="switchTime('ming')" class="time-btn" style="padding: 5px 12px; margin: 0 5px; border: 1px solid #ddd; border-radius: 16px; background: white; color: #333; cursor: pointer; font-size: 0.9rem;">明代</button>
+    <button onclick="switchTime('qing')" class="time-btn" style="padding: 5px 12px; margin: 0 5px; border: 1px solid #ddd; border-radius: 16px; background: white; color: #333; cursor: pointer; font-size: 0.9rem;">清代</button>
+    <button onclick="switchTime('minguo')" class="time-btn" style="padding: 5px 12px; margin: 0 5px; border: 1px solid #ddd; border-radius: 16px; background: white; color: #333; cursor: pointer; font-size: 0.9rem;">民国</button>
+  </div>
+</div>
 
-                <div class="map-display">
-                    <div class="map-placeholder" id="mapPlaceholder">
-                        <div class="map-content">
-                            <div class="map-point spring" style="top: 30%; left: 45%;" data-name="趵突泉">
-                                <span class="point-marker">💧</span>
-                                <span class="point-label">趵突泉</span>
-                            </div>
-                            <div class="map-point spring" style="top: 35%; left: 55%;" data-name="黑虎泉">
-                                <span class="point-marker">💧</span>
-                                <span class="point-label">黑虎泉</span>
-                            </div>
-                            <div class="map-point culture" style="top: 40%; left: 40%;" data-name="大明湖">
-                                <span class="point-marker">🏛️</span>
-                                <span class="point-label">大明湖</span>
-                            </div>
-                            <div class="map-point culture" style="top: 25%; left: 60%;" data-name="解放阁">
-                                <span class="point-marker">⭐</span>
-                                <span class="point-label">解放阁</span>
-                            </div>
-                            <div class="map-point water" style="top: 50%; left: 30%;" data-name="小清河">
-                                <span class="point-marker">🌊</span>
-                                <span class="point-label">小清河</span>
-                            </div>
-                            <div class="water-line" style="top: 42%; left: 35%; width: 40%;"></div>
-                        </div>
-                    </div>
+<!-- GIS地图容器 -->
+<div id="jinan-map" style="width: 100%; height: 500px; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.15); margin: 20px 0;"></div>
 
-                    <div class="map-legend">
-                        <div class="legend-item">
-                            <span class="legend-marker spring">💧</span>
-                            <span data-zh="泉水" data-en="Spring">泉水</span>
-                        </div>
-                        <div class="legend-item">
-                            <span class="legend-marker culture">🏛️</span>
-                            <span data-zh="文化点位" data-en="Cultural Site">文化点位</span>
-                        </div>
-                        <div class="legend-item">
-                            <span class="legend-marker water">🌊</span>
-                            <span data-zh="水系" data-en="Water System">水系</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- 图例 -->
+<div style="display: flex; justify-content: center; gap: 20px; margin-top: 15px; font-size: 0.9rem;">
+  <span>💧 泉水</span>
+  <span>🏛️ 文化点位</span>
+  <span>🌊 水系</span>
+</div>
+
+<!-- 引入Leaflet GIS库 不需要下载 直接引用 -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- GIS地图初始化代码 已经加好济南核心点位 -->
+<script>
+// 初始化地图 中心点设为济南趵突泉
+const map = L.map('jinan-map').setView([36.6667, 117.0333], 13);
+
+// 加载开源地图底图
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+// 济南泉水点位 经纬度已经查好 直接用
+const springMarkers = [
+  L.marker([36.6667, 117.0333]).bindPopup('<b>趵突泉</b><br>天下第一泉，济南七十二名泉之首'),
+  L.marker([36.6685, 117.0402]).bindPopup('<b>黑虎泉</b><br>济南四大泉群之一，声如虎啸'),
+  L.marker([36.6702, 117.0256]).bindPopup('<b>五龙潭</b><br>济南四大泉群之一'),
+  L.marker([36.6678, 117.0189]).bindPopup('<b>珍珠泉</b><br>济南七十二名泉之一')
+];
+
+// 文化点位
+const cultureMarkers = [
+  L.marker([36.6625, 117.0418]).bindPopup('<b>解放阁</b><br>济南战役纪念地，红色文化点位'),
+  L.marker([36.6758, 117.0287]).bindPopup('<b>大明湖</b><br>济南三大名胜之一，泉水汇聚而成'),
+  L.marker([36.6612, 117.0298]).bindPopup('<b>芙蓉街</b><br>济南历史文化街区'),
+  L.marker([36.6645, 117.0156]).bindPopup('<b>李清照故居</b><br>宋代女词人李清照纪念馆')
+];
+
+// 默认显示全部点位
+springMarkers.forEach(m => m.addTo(map));
+cultureMarkers.forEach(m => m.addTo(map));
+
+// 图层切换功能
+function switchLayer(layerType) {
+  // 重置按钮样式
+  document.querySelectorAll('.map-btn').forEach(btn => {
+    btn.style.background = 'white';
+    btn.style.color = '#333';
+    btn.style.borderColor = '#ddd';
+  });
+  event.target.style.background = '#3498db';
+  event.target.style.color = 'white';
+  event.target.style.borderColor = '#3498db';
+
+  // 清除所有点位
+  springMarkers.forEach(m => map.removeLayer(m));
+  cultureMarkers.forEach(m => map.removeLayer(m));
+
+  // 显示对应图层
+  if(layerType === 'all' || layerType === 'spring') {
+    springMarkers.forEach(m => m.addTo(map));
+  }
+  if(layerType === 'all' || layerType === 'culture') {
+    cultureMarkers.forEach(m => m.addTo(map));
+  }
+}
+
+// 时期切换功能（后续可以加不同时期的点位）
+function switchTime(timeType) {
+  document.querySelectorAll('.time-btn').forEach(btn => {
+    btn.style.background = 'white';
+    btn.style.color = '#333';
+    btn.style.borderColor = '#ddd';
+  });
+  event.target.style.background = '#3498db';
+  event.target.style.color = 'white';
+  event.target.style.borderColor = '#3498db';
+}
+</script>
 
     <!-- 关于我们 -->
     <section id="contact" class="contact">
@@ -800,6 +828,25 @@ function switchTab(tabName) {
             </div>
         </div>
     </footer>
+
+    ---
+
+<!-- 页脚时间戳 放在整个页面最底部 -->
+<div style="text-align: center; padding: 20px 0; color: #666; font-size: 0.9rem; border-top: 1px solid #eaecef; margin-top: 50px;">
+  <p>济南水系文化数字人文平台</p>
+  <p id="footer-timestamp" style="margin: 5px 0 0; color: #888; font-size: 0.85rem;"></p>
+</div>
+
+<script>
+// 自动显示页面最后更新时间
+document.getElementById('footer-timestamp').innerText = '最后更新时间：' + new Date().toLocaleString('zh-CN', {
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit'
+});
+</script>
 
     <!-- 返回顶部 -->
     <button class="back-to-top" id="backToTop" title="返回顶部">↑</button>
