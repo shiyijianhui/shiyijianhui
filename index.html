@@ -185,25 +185,22 @@
     </section>
 
     <!-- 文化资源 -->
-    <section id="resources" class="resources">
-        <div class="container">
-            <h2 class="section-title" data-zh="文化资源" data-en="Cultural Resources">文化资源</h2>
+    
+<!-- 标签按钮 完全匹配你原来的文字 -->
+<div style="display: flex; justify-content: center; gap: 15px; margin: 30px 0; flex-wrap: wrap;">
+  <button onclick="switchTab('spring')" id="btn-spring" style="padding: 8px 20px; border: none; border-radius: 20px; background: #3498db; color: white; cursor: pointer; font-size: 1rem;">泉水文化</button>
+  <button onclick="switchTab('scholar')" id="btn-scholar" style="padding: 8px 20px; border: none; border-radius: 20px; background: #f1f1f1; color: #333; cursor: pointer; font-size: 1rem;">名士文化</button>
+  <button onclick="switchTab('red')" id="btn-red" style="padding: 8px 20px; border: none; border-radius: 20px; background: #f1f1f1; color: #333; cursor: pointer; font-size: 1rem;">红色文化</button>
+  <button onclick="switchTab('ancient')" id="btn-ancient" style="padding: 8px 20px; border: none; border-radius: 20px; background: #f1f1f1; color: #333; cursor: pointer; font-size: 1rem;">古城文化</button>
+  <button onclick="switchTab('water')" id="btn-water" style="padding: 8px 20px; border: none; border-radius: 20px; background: #f1f1f1; color: #333; cursor: pointer; font-size: 1rem;">水系脉络</button>
+</div>
 
-            <!-- 资源分类标签 -->
-            <div class="resource-tabs">
-                <button class="tab-btn active" data-tab="spring" data-zh="泉水文化" data-en="Spring Culture">泉水文化</button>
-                <button class="tab-btn" data-tab="scholar" data-zh="名士文化" data-en="Scholar Culture">名士文化</button>
-                <button class="tab-btn" data-tab="revolution" data-zh="红色文化" data-en="Revolutionary Culture">红色文化</button>
-                <button class="tab-btn" data-tab="ancient" data-zh="古城文化" data-en="Ancient City">古城文化</button>
-                <button class="tab-btn" data-tab="water" data-zh="水系脉络" data-en="Water System">水系脉络</button>
-            </div>
+<!-- ====================== 泉水文化内容 默认显示 ====================== -->
+<div id="tab-spring" class="tab-panel" style="display: block;">
+### 济南泉水文化
+济南泉水众多，素有"七十二名泉"之说，泉水文化是济南最具代表性的城市名片。
 
-            <!-- 泉水文化 -->
-            
-<div style="display: flex; flex-direction: column; gap: 20px; margin: 20px 0;">
-
-<!-- 趵突泉 带实景图 无emoji -->
-<div style="display: flex; gap: 20px; padding: 15px; border-radius: 12px; background: #f8fafc; align-items: center;">
+<div style="display: flex; gap: 20px; padding: 15px; border-radius: 12px; background: #f8fafc; align-items: center; margin: 15px 0;">
   <div style="width: 120px; height: 120px; border-radius: 8px; overflow: hidden; flex-shrink: 0;">
     <img src="baotuquan.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="趵突泉">
   </div>
@@ -214,8 +211,7 @@
   </div>
 </div>
 
-<!-- 黑虎泉 带实景图 无emoji -->
-<div style="display: flex; gap: 20px; padding: 15px; border-radius: 12px; background: #f8fafc; align-items: center;">
+<div style="display: flex; gap: 20px; padding: 15px; border-radius: 12px; background: #f8fafc; align-items: center; margin: 15px 0;">
   <div style="width: 120px; height: 120px; border-radius: 8px; overflow: hidden; flex-shrink: 0;">
     <img src="heihuquan.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="黑虎泉">
   </div>
@@ -226,8 +222,7 @@
   </div>
 </div>
 
-<!-- 珍珠泉 带实景图 无emoji -->
-<div style="display: flex; gap: 20px; padding: 15px; border-radius: 12px; background: #f8fafc; align-items: center;">
+<div style="display: flex; gap: 20px; padding: 15px; border-radius: 12px; background: #f8fafc; align-items: center; margin: 15px 0;">
   <div style="width: 120px; height: 120px; border-radius: 8px; overflow: hidden; flex-shrink: 0;">
     <img src="zhenzhuquan.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="珍珠泉">
   </div>
@@ -238,8 +233,7 @@
   </div>
 </div>
 
-<!-- 五龙潭 带实景图 无emoji -->
-<div style="display: flex; gap: 20px; padding: 15px; border-radius: 12px; background: #f8fafc; align-items: center;">
+<div style="display: flex; gap: 20px; padding: 15px; border-radius: 12px; background: #f8fafc; align-items: center; margin: 15px 0;">
   <div style="width: 120px; height: 120px; border-radius: 8px; overflow: hidden; flex-shrink: 0;">
     <img src="wulongtan.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="五龙潭">
   </div>
@@ -249,200 +243,102 @@
     <span style="display: inline-block; padding: 3px 10px; background: #e3f2fd; color: #1976d2; border-radius: 12px; font-size: 0.85rem;">济南七十二名泉</span>
   </div>
 </div>
-
 </div>
 
-            <!-- 名士文化 -->
-            <!-- 名士文化内容块 已按时间排序+分板块 -->
-<div id="tab-scholar" class="tab-content">
-  <h3 style="margin: 0 0 20px; color: #2c5c97;">济南名士文化</h3>
-  <p style="margin: 0 0 25px; color: #555;">济南自古人文荟萃，历代文人墨客在此留下无数佳作与佳话，素有"济南名士多"的美誉。</p>
+<!-- ====================== 名士文化内容 默认隐藏 ====================== -->
+<div id="tab-scholar" class="tab-panel" style="display: none;">
+### 济南名士文化
+济南自古人文荟萃，历代文人墨客在此留下无数佳作与佳话，素有"济南名士多"的美誉。
 
-  <!-- 第一板块：古代名士（宋-明 按时间从远到近排序） -->
-  <h4 style="margin: 30px 0 15px; color: #2c5c97; border-left: 4px solid #3498db; padding-left: 10px;">古代名士（宋-明）</h4>
-  <div style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 30px;">
-    <!-- 1. 曾巩 北宋（最早） -->
-    <div style="display: flex; gap: 20px; padding: 15px; border-radius: 12px; background: #f8fafc; align-items: center;">
-      <div style="width: 120px; height: 120px; border-radius: 8px; overflow: hidden; flex-shrink: 0;">
-        <img src="https://picsum.photos/id/1066/200/200" style="width: 100%; height: 100%; object-fit: cover;" alt="曾巩">
-      </div>
-      <div>
-        <h4 style="margin: 0 0 8px; font-size: 1.1rem; color: #2c5c97;">曾巩</h4>
-        <p style="margin: 0 0 8px; color: #333;">北宋文学家，唐宋八大家之一，曾任齐州（济南）知州，主持修建北水门，治理济南水患</p>
-        <span style="display: inline-block; padding: 3px 10px; background: #e3f2fd; color: #1976d2; border-radius: 12px; font-size: 0.85rem;">北宋 · 唐宋八大家</span>
-      </div>
-    </div>
+<h4 style="margin: 30px 0 15px; color: #2c5c97; border-left: 4px solid #3498db; padding-left: 10px;">古代名士（宋-明）</h4>
 
-    <!-- 2. 李清照 北宋末-南宋 -->
-    <div style="display: flex; gap: 20px; padding: 15px; border-radius: 12px; background: #f8fafc; align-items: center;">
-      <div style="width: 120px; height: 120px; border-radius: 8px; overflow: hidden; flex-shrink: 0;">
-        <img src="liqingzhao.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="李清照">
-      </div>
-      <div>
-        <h4 style="margin: 0 0 8px; font-size: 1.1rem; color: #2c5c97;">李清照</h4>
-        <p style="margin: 0 0 8px; color: #333;">济南章丘人，宋代婉约词派代表，有"千古第一才女"之称，词作独步一时</p>
-        <span style="display: inline-block; padding: 3px 10px; background: #e3f2fd; color: #1976d2; border-radius: 12px; font-size: 0.85rem;">南宋 · 千古第一才女</span>
-      </div>
-    </div>
-
-    <!-- 3. 辛弃疾 南宋 -->
-    <div style="display: flex; gap: 20px; padding: 15px; border-radius: 12px; background: #f8fafc; align-items: center;">
-      <div style="width: 120px; height: 120px; border-radius: 8px; overflow: hidden; flex-shrink: 0;">
-        <img src="xinqiji.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="辛弃疾">
-      </div>
-      <div>
-        <h4 style="margin: 0 0 8px; font-size: 1.1rem; color: #2c5c97;">辛弃疾</h4>
-        <p style="margin: 0 0 8px; color: #333;">济南历城人，南宋豪放派词人、爱国将领，人称"词中之龙"，与李清照并称"济南二安"</p>
-        <span style="display: inline-block; padding: 3px 10px; background: #e3f2fd; color: #1976d2; border-radius: 12px; font-size: 0.85rem;">南宋 · 词中之龙</span>
-      </div>
-    </div>
-
-    <!-- 4. 张养浩 元代 -->
-    <div style="display: flex; gap: 20px; padding: 15px; border-radius: 12px; background: #f8fafc; align-items: center;">
-      <div style="width: 120px; height: 120px; border-radius: 8px; overflow: hidden; flex-shrink: 0;">
-        <img src="zhangyanghao.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="张养浩">
-      </div>
-      <div>
-        <h4 style="margin: 0 0 8px; font-size: 1.1rem; color: #2c5c97;">张养浩</h4>
-        <p style="margin: 0 0 8px; color: #333;">济南历城人，元代散曲家、政治家，《山坡羊·潼关怀古》作者，为官清廉爱民</p>
-        <span style="display: inline-block; padding: 3px 10px; background: #e3f2fd; color: #1976d2; border-radius: 12px; font-size: 0.85rem;">元代 · 散曲大家</span>
-      </div>
-    </div>
-
-    <!-- 5. 李攀龙 明代 -->
-    <div style="display: flex; gap: 20px; padding: 15px; border-radius: 12px; background: #f8fafc; align-items: center;">
-      <div style="width: 120px; height: 120px; border-radius: 8px; overflow: hidden; flex-shrink: 0;">
-        <img src="lipanlong.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="李攀龙">
-      </div>
-      <div>
-        <h4 style="margin: 0 0 8px; font-size: 1.1rem; color: #2c5c97;">李攀龙</h4>
-        <p style="margin: 0 0 8px; color: #333;">济南历城人，明代"后七子"领袖，著名文学家，主盟文坛二十余年</p>
-        <span style="display: inline-block; padding: 3px 10px; background: #e3f2fd; color: #1976d2; border-radius: 12px; font-size: 0.85rem;">明代 · 后七子领袖</span>
-      </div>
-    </div>
+<div style="display: flex; gap: 20px; padding: 15px; border-radius: 12px; background: #f8fafc; align-items: center; margin: 15px 0;">
+  <div style="width: 120px; height: 120px; border-radius: 8px; overflow: hidden; flex-shrink: 0;">
+    <img src="https://picsum.photos/id/1066/200/200" style="width: 100%; height: 100%; object-fit: cover;" alt="曾巩">
   </div>
-
-  <!-- 第二板块：近现代名士 -->
-  <h4 style="margin: 30px 0 15px; color: #2c5c97; border-left: 4px solid #3498db; padding-left: 10px;">近现代名士</h4>
-  <div style="display: flex; flex-direction: column; gap: 20px;">
-    <!-- 老舍 现代（最晚） -->
-    <div style="display: flex; gap: 20px; padding: 15px; border-radius: 12px; background: #f8fafc; align-items: center;">
-      <div style="width: 120px; height: 120px; border-radius: 8px; overflow: hidden; flex-shrink: 0;">
-        <img src="laoshe.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="老舍">
-      </div>
-      <div>
-        <h4 style="margin: 0 0 8px; font-size: 1.1rem; color: #2c5c97;">老舍</h4>
-        <p style="margin: 0 0 8px; color: #333;">曾执教于齐鲁大学，在济南生活多年，写下《济南的冬天》等名篇，深爱泉城</p>
-        <span style="display: inline-block; padding: 3px 10px; background: #e3f2fd; color: #1976d2; border-radius: 12px; font-size: 0.85rem;">现代 · 人民艺术家</span>
-      </div>
-    </div>
+  <div>
+    <h4 style="margin: 0 0 8px; font-size: 1.1rem; color: #2c5c97;">曾巩</h4>
+    <p style="margin: 0 0 8px; color: #333;">北宋文学家，唐宋八大家之一，曾任齐州知州，主持修建北水门治理水患</p>
+    <span style="display: inline-block; padding: 3px 10px; background: #e3f2fd; color: #1976d2; border-radius: 12px; font-size: 0.85rem;">北宋 · 唐宋八大家</span>
   </div>
 </div>
 
-            <!-- 红色文化 -->
-            <div class="resource-content" id="tab-revolution">
-                <div class="resource-intro">
-                    <h3 data-zh="济南红色文化" data-en="Jinan Revolutionary Culture">济南红色文化</h3>
-                    <p data-zh="济南是一座具有光荣革命传统的城市，留下了许多珍贵的红色遗址和革命故事。" data-en="Jinan has a glorious revolutionary tradition with many precious sites and stories.">济南是一座具有光荣革命传统的城市，留下了许多珍贵的红色遗址和革命故事。</p>
-                </div>
-                <div class="resource-grid">
-                    <div class="resource-item">
-                        <div class="resource-image">⭐</div>
-                        <h4>解放阁</h4>
-                        <p data-zh="纪念济南战役胜利而建，是济南解放的标志性建筑" data-en="Built to commemorate the victory of Jinan Battle">纪念济南战役胜利而建，是济南解放的标志性建筑</p>
-                        <span class="resource-tag" data-zh="山东省文物保护单位" data-en="Provincial Heritage Site">山东省文物保护单位</span>
-                    </div>
-                    <div class="resource-item">
-                        <div class="resource-image">⭐</div>
-                        <h4>英雄山革命烈士陵园</h4>
-                        <p data-zh="安葬革命先烈，传承红色基因的重要场所" data-en="Resting place of revolutionary martyrs">安葬革命先烈，传承红色基因的重要场所</p>
-                        <span class="resource-tag" data-zh="全国重点烈士纪念设施" data-en="National Memorial Site">全国重点烈士纪念设施</span>
-                    </div>
-                    <div class="resource-item">
-                        <div class="resource-image">⭐</div>
-                        <h4>济南战役纪念馆</h4>
-                        <p data-zh="全面展示济南战役历史，弘扬革命精神" data-en="Comprehensive exhibition of Jinan Battle history">全面展示济南战役历史，弘扬革命精神</p>
-                        <span class="resource-tag" data-zh="爱国主义教育基地" data-en="Patriotic Education Base">爱国主义教育基地</span>
-                    </div>
-                    <div class="resource-item">
-                        <div class="resource-image">⭐</div>
-                        <h4>中共山东省党史陈列馆</h4>
-                        <p data-zh="展示山东党组织发展历程和辉煌成就" data-en="Exhibiting Shandong Party organization history">展示山东党组织发展历程和辉煌成就</p>
-                        <span class="resource-tag" data-zh="红色教育基地" data-en="Red Education Base">红色教育基地</span>
-                    </div>
-                </div>
-            </div>
+<div style="display: flex; gap: 20px; padding: 15px; border-radius: 12px; background: #f8fafc; align-items: center; margin: 15px 0;">
+  <div style="width: 120px; height: 120px; border-radius: 8px; overflow: hidden; flex-shrink: 0;">
+    <img src="scholar-liqingzhao.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="李清照">
+  </div>
+  <div>
+    <h4 style="margin: 0 0 8px; font-size: 1.1rem; color: #2c5c97;">李清照</h4>
+    <p style="margin: 0 0 8px; color: #333;">济南章丘人，宋代婉约词派代表，有"千古第一才女"之称</p>
+    <span style="display: inline-block; padding: 3px 10px; background: #e3f2fd; color: #1976d2; border-radius: 12px; font-size: 0.85rem;">南宋 · 千古第一才女</span>
+  </div>
+</div>
 
-            <!-- 古城文化 -->
-            <div class="resource-content" id="tab-ancient">
-                <div class="resource-intro">
-                    <h3 data-zh="济南古城与商埠文化" data-en="Jinan Ancient City & Commercial Port">济南古城与商埠文化</h3>
-                    <p data-zh="济南古城历史悠久，商埠区见证了近代济南的开埠历史，形成了独特的城市风貌。" data-en="Jinan's ancient city has a long history, and the commercial port area witnessed modern development.">济南古城历史悠久，商埠区见证了近代济南的开埠历史，形成了独特的城市风貌。</p>
-                </div>
-                <div class="resource-grid">
-                    <div class="resource-item">
-                        <div class="resource-image">🏯</div>
-                        <h4>明府城</h4>
-                        <p data-zh="明代济南府城遗址，保留古城格局与历史风貌" data-en="Ming Dynasty city site with preserved layout">明代济南府城遗址，保留古城格局与历史风貌</p>
-                        <span class="resource-tag" data-zh="历史文化街区" data-en="Historical Block">历史文化街区</span>
-                    </div>
-                    <div class="resource-item">
-                        <div class="resource-image">🏯</div>
-                        <h4>芙蓉街</h4>
-                        <p data-zh="济南最古老街道之一，老字号云集" data-en="One of Jinan's oldest streets with time-honored brands">济南最古老街道之一，老字号云集</p>
-                        <span class="resource-tag" data-zh="美食文化街" data-en="Food Culture Street">美食文化街</span>
-                    </div>
-                    <div class="resource-item">
-                        <div class="resource-image">🏯</div>
-                        <h4>经纬路商埠区</h4>
-                        <p data-zh="近代济南开埠后形成的商业区，中西合璧建筑林立" data-en="Commercial area formed after Jinan's opening">近代济南开埠后形成的商业区，中西合璧建筑林立</p>
-                        <span class="resource-tag" data-zh="近现代建筑群" data-en="Modern Architecture">近现代建筑群</span>
-                    </div>
-                    <div class="resource-item">
-                        <div class="resource-image">🏯</div>
-                        <h4>宽厚里</h4>
-                        <p data-zh="济南老城区历史文化街区，传统与现代交融" data-en="Historical block blending tradition and modernity">济南老城区历史文化街区，传统与现代交融</p>
-                        <span class="resource-tag" data-zh="文旅融合示范" data-en="Cultural Tourism Model">文旅融合示范</span>
-                    </div>
-                </div>
-            </div>
+<div style="display: flex; gap: 20px; padding: 15px; border-radius: 12px; background: #f8fafc; align-items: center; margin: 15px 0;">
+  <div style="width: 120px; height: 120px; border-radius: 8px; overflow: hidden; flex-shrink: 0;">
+    <img src="https://picsum.photos/id/1074/200/200" style="width: 100%; height: 100%; object-fit: cover;" alt="辛弃疾">
+  </div>
+  <div>
+    <h4 style="margin: 0 0 8px; font-size: 1.1rem; color: #2c5c97;">辛弃疾</h4>
+    <p style="margin: 0 0 8px; color: #333;">济南历城人，南宋豪放派词人，人称"词中之龙"</p>
+    <span style="display: inline-block; padding: 3px 10px; background: #e3f2fd; color: #1976d2; border-radius: 12px; font-size: 0.85rem;">南宋 · 词中之龙</span>
+  </div>
+</div>
 
-            <!-- 水系脉络 -->
-            <div class="resource-content" id="tab-water">
-                <div class="resource-intro">
-                    <h3 data-zh="济南水系脉络" data-en="Jinan Water System">济南水系脉络</h3>
-                    <p data-zh="济南水系以泉水为源，形成护城河、大明湖、小清河等水网，构成了独特的城市水系格局。" data-en="Jinan's water system originates from springs, forming a unique urban water network.">济南水系以泉水为源，形成护城河、大明湖、小清河等水网，构成了独特的城市水系格局。</p>
-                </div>
-                <div class="resource-grid">
-                    <div class="resource-item">
-                        <div class="resource-image">🌊</div>
-                        <h4>大明湖</h4>
-                        <p data-zh="济南三大名胜之一，泉水汇聚而成" data-en="One of Jinan's three famous attractions">济南三大名胜之一，泉水汇聚而成</p>
-                        <span class="resource-tag" data-zh="国家5A级景区" data-en="5A Scenic Area">国家5A级景区</span>
-                    </div>
-                    <div class="resource-item">
-                        <div class="resource-image">🌊</div>
-                        <h4>护城河</h4>
-                        <p data-zh="环绕古城，泉水汇流，可乘船游览" data-en="Surrounding the ancient city, boat tours available">环绕古城，泉水汇流，可乘船游览</p>
-                        <span class="resource-tag" data-zh="泉水游览线" data-en="Spring Tour Route">泉水游览线</span>
-                    </div>
-                    <div class="resource-item">
-                        <div class="resource-image">🌊</div>
-                        <h4>小清河</h4>
-                        <p data-zh="济南重要的排洪河道和航运水道" data-en="Important drainage and shipping channel">济南重要的排洪河道和航运水道</p>
-                        <span class="resource-tag" data-zh="城市水脉" data-en="Urban Water Vein">城市水脉</span>
-                    </div>
-                    <div class="resource-item">
-                        <div class="resource-image">🌊</div>
-                        <h4>曲水亭街</h4>
-                        <p data-zh="小桥流水人家，展现济南水乡风情" data-en="Bridges, streams and homes showing Jinan's water town charm">小桥流水人家，展现济南水乡风情</p>
-                        <span class="resource-tag" data-zh="泉城风貌带" data-en="Spring City Style">泉城风貌带</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<h4 style="margin: 30px 0 15px; color: #2c5c97; border-left: 4px solid #3498db; padding-left: 10px;">近现代名士</h4>
 
+<div style="display: flex; gap: 20px; padding: 15px; border-radius: 12px; background: #f8fafc; align-items: center; margin: 15px 0;">
+  <div style="width: 120px; height: 120px; border-radius: 8px; overflow: hidden; flex-shrink: 0;">
+    <img src="https://picsum.photos/id/1062/200/200" style="width: 100%; height: 100%; object-fit: cover;" alt="老舍">
+  </div>
+  <div>
+    <h4 style="margin: 0 0 8px; font-size: 1.1rem; color: #2c5c97;">老舍</h4>
+    <p style="margin: 0 0 8px; color: #333;">曾执教齐鲁大学，写下《济南的冬天》，被称为"济南的知音"</p>
+    <span style="display: inline-block; padding: 3px 10px; background: #e3f2fd; color: #1976d2; border-radius: 12px; font-size: 0.85rem;">现代 · 人民艺术家</span>
+  </div>
+</div>
+</div>
+
+<!-- ====================== 红色文化内容 默认隐藏 ====================== -->
+<div id="tab-red" class="tab-panel" style="display: none;">
+### 济南红色文化
+济南拥有丰富的红色文化资源，是革命历史的重要见证地。
+<p style="text-align: center; color: #888; padding: 40px 0;">内容正在完善中...</p>
+</div>
+
+<!-- ====================== 古城文化内容 默认隐藏 ====================== -->
+<div id="tab-ancient" class="tab-panel" style="display: none;">
+### 济南古城文化
+济南古城历史悠久，明府城、老商埠承载着城市记忆。
+<p style="text-align: center; color: #888; padding: 40px 0;">内容正在完善中...</p>
+</div>
+
+<!-- ====================== 水系脉络内容 默认隐藏 ====================== -->
+<div id="tab-water" class="tab-panel" style="display: none;">
+### 济南水系脉络
+济南水系发达，泉水、河流、湖泊共同构成独特的城市水网。
+<p style="text-align: center; color: #888; padding: 40px 0;">内容正在完善中...</p>
+</div>
+
+<!-- 标签切换脚本 直接生效 不用额外加JS文件 -->
+<script>
+function switchTab(tabName) {
+  // 隐藏所有内容
+  document.querySelectorAll('.tab-panel').forEach(panel => {
+    panel.style.display = 'none';
+  });
+  // 重置所有按钮样式
+  document.querySelectorAll('[id^="btn-"]').forEach(btn => {
+    btn.style.background = '#f1f1f1';
+    btn.style.color = '#333';
+  });
+  // 显示选中的内容
+  document.getElementById('tab-' + tabName).style.display = 'block';
+  // 高亮选中的按钮
+  document.getElementById('btn-' + tabName).style.background = '#3498db';
+  document.getElementById('btn-' + tabName).style.color = 'white';
+}
+</script>
     <!-- AI智能体 -->
     <section id="ai" class="ai-section">
         <div class="container">
