@@ -401,53 +401,90 @@ function switchTab(tabName) {
 </script>
     <!-- AI智能体 -->
     <section id="ai" class="ai-section">
-        <div class="container">
-            <h2 class="section-title" data-zh="AI智能体" data-en="AI Agent">AI智能体</h2>
-            <div class="ai-intro">
-                <p data-zh="基于大语言模型的智能问答系统，为您提供济南水系文化的深度解读与个性化服务" data-en="LLM-based intelligent Q&A system for in-depth interpretation and personalized services">基于大语言模型的智能问答系统，为您提供济南水系文化的深度解读与个性化服务</p>
+    <div class="container">
+        <h2 class="section-title" data-zh="AI智能体" data-en="AI Agent">AI智能体</h2>
+        <div class="ai-intro">
+            <p data-zh="基于大语言模型的智能问答系统，为您提供济南水系文化的深度解读与个性化服务" 
+               data-en="LLM-based intelligent Q&A system for in-depth interpretation and personalized services">
+                基于大语言模型的智能问答系统，为您提供济南水系文化的深度解读与个性化服务
+            </p>
+        </div>
+        <div class="ai-cards">
+            <!-- 文化问答 -->
+            <div class="ai-card">
+                <div class="card-icon">
+                    <!-- 可替换为你自己的图标 -->
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                    </svg>
+                </div>
+                <h3 class="card-title" data-zh="文化问答" data-en="Culture Q&A">文化问答</h3>
+                <p class="card-desc" 
+                   data-zh="智能解答济南泉水文化、历史名人、文化遗址等相关问题" 
+                   data-en="Intelligent answers to questions about Jinan spring culture, historical figures and cultural sites">
+                    智能解答济南泉水文化、历史名人、文化遗址等相关问题
+                </p>
+                <button class="card-btn" data-zh="开始问答" data-en="Start Q&A">开始问答</button>
             </div>
 
-            <div class="ai-features">
-                <div class="ai-feature-card">
-                    <div class="ai-feature-icon">💬</div>
-                    <h3 data-zh="文化问答" data-en="Cultural Q&A">文化问答</h3>
-                    <p data-zh="智能解答济南泉水文化、历史名人、文化遗址等相关问题" data-en="Intelligent answers about Jinan's spring culture, historical figures, and cultural sites">智能解答济南泉水文化、历史名人、文化遗址等相关问题</p>
-                    <button class="btn btn-outline" onclick="openChat()" data-zh="开始问答" data-en="Start Chat">开始问答</button>
+            <!-- 语音讲解 -->
+            <div class="ai-card">
+                <div class="card-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                        <line x1="12" y1="19" x2="12" y2="23"></line>
+                        <line x1="8" y1="23" x2="16" y2="23"></line>
+                    </svg>
                 </div>
-                <div class="ai-feature-card">
-                    <div class="ai-feature-icon">🎙️</div>
-                    <h3 data-zh="语音讲解" data-en="Voice Narration">语音讲解</h3>
-                    <p data-zh="AI语音导览，为景点提供专业讲解，支持中英双语" data-en="AI voice guide with professional narration in Chinese and English">AI语音导览，为景点提供专业讲解，支持中英双语</p>
-                    <button class="btn btn-outline" onclick="openVoice()" data-zh="语音演示" data-en="Voice Demo">语音演示</button>
-                </div>
-                <div class="ai-feature-card">
-                    <div class="ai-feature-icon">📍</div>
-                    <h3 data-zh="路线规划" data-en="Route Planning">路线规划</h3>
-                    <p data-zh="根据兴趣偏好，智能规划个性化游览路线，优化行程安排" data-en="Personalized tour route planning based on your interests">根据兴趣偏好，智能规划个性化游览路线，优化行程安排</p>
-                    <button class="btn btn-outline" onclick="openRoute()" data-zh="规划路线" data-en="Plan Route">规划路线</button>
-                </div>
+                <h3 class="card-title" data-zh="语音讲解" data-en="Audio Guide">语音讲解</h3>
+                <p class="card-desc" 
+                   data-zh="AI语音导览，为景点提供专业讲解，支持中英双语" 
+                   data-en="AI audio guide, professional commentary for attractions, supporting Chinese and English">
+                    AI语音导览，为景点提供专业讲解，支持中英双语
+                </p>
+                <button class="card-btn" data-zh="语音演示" data-en="Audio Demo">语音演示</button>
             </div>
 
-            <!-- AI对话演示区 -->
-            <div class="ai-demo" id="aiDemo">
-                <div class="chat-container">
-                    <div class="chat-header">
-                        <h4 data-zh="济南水系文化智能助手" data-en="Jinan Water Culture Assistant">济南水系文化智能助手</h4>
-                        <button class="close-btn" onclick="closeChat()">&times;</button>
-                    </div>
-                    <div class="chat-messages" id="chatMessages">
-                        <div class="message bot-message">
-                            <span data-zh="您好！我是济南水系文化智能助手，有什么可以帮您的？" data-en="Hello! I'm the Jinan Water Culture Assistant. How can I help you?">您好！我是济南水系文化智能助手，有什么可以帮您的？</span>
-                        </div>
-                    </div>
-                    <div class="chat-input">
-                        <input type="text" id="userInput" data-placeholder-zh="请输入您的问题..." data-placeholder-en="Type your question..." placeholder="请输入您的问题...">
-                        <button onclick="sendMessage()" data-zh="发送" data-en="Send">发送</button>
-                    </div>
+            <!-- 路线规划 -->
+            <div class="ai-card">
+                <div class="card-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
                 </div>
+                <h3 class="card-title" data-zh="路线规划" data-en="Route Planning">路线规划</h3>
+                <p class="card-desc" 
+                   data-zh="根据兴趣偏好，智能规划个性化游览路线，优化行程安排" 
+                   data-en="Intelligently plan personalized routes based on interests and preferences">
+                    根据兴趣偏好，智能规划个性化游览路线，优化行程安排
+                </p>
+                <button class="card-btn" data-zh="规划路线" data-en="Plan Route">规划路线</button>
+            </div>
+
+            <!-- 新增：历史复原 -->
+            <div class="ai-card">
+                <div class="card-icon">
+                    <!-- 这里给你选了一个“建筑/历史复原”风格的图标，可按需替换 -->
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 21h18"></path>
+                        <path d="M5 21V7l8-4v18"></path>
+                        <path d="M9 21V5l-5-1"></path>
+                        <path d="M13 21V3l5 1v18"></path>
+                    </svg>
+                </div>
+                <h3 class="card-title" data-zh="历史复原" data-en="Historical Reconstruction">历史复原</h3>
+                <p class="card-desc" 
+                   data-zh="基于数字档案与历史文献，智能复原济南水系与古建的历史风貌，支持场景重建与时空漫游" 
+                   data-en="Digitally reconstructing historical landscapes of Jinan water systems and ancient architecture based on archives and documents">
+                    基于数字档案与历史文献，智能复原济南水系与古建的历史风貌，支持场景重建与时空漫游
+                </p>
+                <button class="card-btn" data-zh="进入复原" data-en="Enter Reconstruction">进入复原</button>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- 虚拟漫游 -->
     <section id="tour" class="tour-section">
